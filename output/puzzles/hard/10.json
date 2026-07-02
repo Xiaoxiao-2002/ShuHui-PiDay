@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "variant": "circle_pack",
+  "board": {
+    "row_lengths": [
+      3,
+      4,
+      5,
+      4,
+      3
+    ]
+  },
+  "clues": [
+    {
+      "cell_id": "circle:1:0",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "circle:1:1",
+      "kind": "pi",
+      "locked": false
+    },
+    {
+      "cell_id": "circle:1:3",
+      "kind": "number",
+      "locked": false,
+      "value": 4
+    },
+    {
+      "cell_id": "circle:2:1",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "circle:2:2",
+      "kind": "pi",
+      "locked": false
+    },
+    {
+      "cell_id": "circle:3:2",
+      "kind": "number",
+      "locked": false,
+      "value": 2
+    },
+    {
+      "cell_id": "circle:3:3",
+      "kind": "pi",
+      "locked": false
+    },
+    {
+      "cell_id": "tri:circle:0:0+circle:0:1+circle:1:1",
+      "kind": "pi",
+      "locked": false
+    },
+    {
+      "cell_id": "tri:circle:0:0+circle:1:0+circle:1:1",
+      "kind": "pi",
+      "locked": false
+    },
+    {
+      "cell_id": "tri:circle:0:2+circle:1:2+circle:1:3",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "tri:circle:1:1+circle:1:2+circle:2:2",
+      "kind": "pi",
+      "locked": false
+    },
+    {
+      "cell_id": "tri:circle:1:2+circle:2:2+circle:2:3",
+      "kind": "number",
+      "locked": false,
+      "value": 2
+    },
+    {
+      "cell_id": "tri:circle:2:1+circle:2:2+circle:3:1",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "tri:circle:3:1+circle:3:2+circle:4:1",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    }
+  ],
+  "target_solution_edges": [
+    "arc:0:0:1",
+    "arc:0:0:2",
+    "arc:0:0:3",
+    "arc:0:0:4",
+    "arc:0:0:5",
+    "arc:0:1:3",
+    "arc:0:1:4",
+    "arc:0:1:5",
+    "arc:0:2:0",
+    "arc:0:2:3",
+    "arc:0:2:4",
+    "arc:0:2:5",
+    "arc:1:1:4",
+    "arc:1:1:5",
+    "arc:1:2:1",
+    "arc:1:2:2",
+    "arc:1:3:0",
+    "arc:1:3:1",
+    "arc:1:3:4",
+    "arc:1:3:5",
+    "arc:2:2:0",
+    "arc:2:3:0",
+    "arc:2:3:3",
+    "arc:2:3:5",
+    "arc:3:2:4",
+    "arc:3:2:5",
+    "arc:3:3:3"
+  ],
+  "analysis": {
+    "status": "unique",
+    "solution_edges": [
+      "arc:0:0:1",
+      "arc:0:0:2",
+      "arc:0:0:3",
+      "arc:0:0:4",
+      "arc:0:0:5",
+      "arc:0:1:3",
+      "arc:0:1:4",
+      "arc:0:1:5",
+      "arc:0:2:0",
+      "arc:0:2:3",
+      "arc:0:2:4",
+      "arc:0:2:5",
+      "arc:1:1:4",
+      "arc:1:1:5",
+      "arc:1:2:1",
+      "arc:1:2:2",
+      "arc:1:3:0",
+      "arc:1:3:1",
+      "arc:1:3:4",
+      "arc:1:3:5",
+      "arc:2:2:0",
+      "arc:2:3:0",
+      "arc:2:3:3",
+      "arc:2:3:5",
+      "arc:3:2:4",
+      "arc:3:2:5",
+      "arc:3:3:3"
+    ],
+    "puzzle_hash": "48f2d7e951ed50cb51696f63e95e6d5b8da6771e4ed50a59ebe054d12c10185d",
+    "elapsed_seconds": 0.030999999995401595,
+    "message": "题目有唯一解"
+  },
+  "metadata": {
+    "source_candidate": "027",
+    "generator": {
+      "seed": 20260711,
+      "time_limit": 25,
+      "elapsed_seconds": 25.032,
+      "numeric_clues": 8,
+      "pi_clues": 6,
+      "proven_minimal_numbers": false
+    },
+    "difficulty": {
+      "label": "medium",
+      "level": 3,
+      "logical_steps": 22,
+      "unresolved_edges": 92,
+      "total_edges": 114,
+      "score": 84.302,
+      "techniques": [
+        "数字完成",
+        "顶点度数"
+      ],
+      "loop_edges": 27,
+      "circle_transitions": 11,
+      "coverage_ratio": 0.7
+    },
+    "id": "TSH-10",
+    "title": "TSH-10",
+    "curated_difficulty": "中级 Medium",
+    "playtest_status": "pending_two_testers",
+    "difficulty_level": 3,
+    "difficulty_tier": "medium"
+  }
+}

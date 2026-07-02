@@ -1,0 +1,6 @@
+-r requirements.txt
+pytest>=8.3,<9
+pytest-cov>=6,<7
+pyinstaller>=6.11,<7
+pdfplumber>=0.11,<1
+pypdf>=5,<7

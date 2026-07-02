@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "variant": "circle_pack",
+  "board": {
+    "row_lengths": [
+      4,
+      3,
+      4,
+      3
+    ]
+  },
+  "clues": [
+    {
+      "cell_id": "circle:2:3",
+      "kind": "number",
+      "locked": false,
+      "value": 4
+    },
+    {
+      "cell_id": "circle:3:2",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "tri:circle:1:2+circle:2:2+circle:2:3",
+      "kind": "number",
+      "locked": false,
+      "value": 2
+    }
+  ],
+  "target_solution_edges": [
+    "arc:1:2:1",
+    "arc:2:2:0",
+    "arc:2:2:5",
+    "arc:2:3:0",
+    "arc:2:3:1",
+    "arc:2:3:4",
+    "arc:2:3:5",
+    "arc:3:2:4"
+  ],
+  "analysis": {
+    "status": "unique",
+    "solution_edges": [
+      "arc:1:2:1",
+      "arc:2:2:0",
+      "arc:2:2:5",
+      "arc:2:3:0",
+      "arc:2:3:1",
+      "arc:2:3:4",
+      "arc:2:3:5",
+      "arc:3:2:4"
+    ],
+    "puzzle_hash": "bc275b17716528b16db382f2135c220ee5aefb4b7b6a68d8f9380d6d5b2e8dbe",
+    "elapsed_seconds": 0.07900000002700835,
+    "message": "题目有唯一解"
+  },
+  "metadata": {
+    "seed": 20553704,
+    "target_fingerprint": "47d995e3107fda3a",
+    "target_edge_count": 8,
+    "generator": {
+      "seed": 20553704,
+      "time_limit": 2.0,
+      "elapsed_seconds": 0.641,
+      "numeric_clues": 3,
+      "pi_clues": 0,
+      "proven_minimal_numbers": true
+    },
+    "difficulty": {
+      "label": "hard",
+      "logical_steps": 0,
+      "unresolved_edges": 84,
+      "total_edges": 84,
+      "score": 117.931,
+      "techniques": []
+    },
+    "candidate_index": 38,
+    "playtest_status": "pending"
+  }
+}

@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "variant": "circle_pack",
+  "board": {
+    "row_lengths": [
+      4,
+      5,
+      4,
+      5,
+      4
+    ]
+  },
+  "clues": [
+    {
+      "cell_id": "circle:0:0",
+      "kind": "pi",
+      "locked": false
+    },
+    {
+      "cell_id": "circle:0:3",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "circle:1:1",
+      "kind": "number",
+      "locked": false,
+      "value": 3
+    },
+    {
+      "cell_id": "circle:1:2",
+      "kind": "number",
+      "locked": false,
+      "value": 2
+    },
+    {
+      "cell_id": "circle:2:0",
+      "kind": "pi",
+      "locked": false
+    },
+    {
+      "cell_id": "circle:2:1",
+      "kind": "pi",
+      "locked": false
+    },
+    {
+      "cell_id": "circle:2:2",
+      "kind": "pi",
+      "locked": false
+    },
+    {
+      "cell_id": "circle:4:1",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "circle:4:3",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "tri:circle:0:0+circle:0:1+circle:1:1",
+      "kind": "pi",
+      "locked": false
+    },
+    {
+      "cell_id": "tri:circle:0:1+circle:1:1+circle:1:2",
+      "kind": "pi",
+      "locked": false
+    },
+    {
+      "cell_id": "tri:circle:0:2+circle:0:3+circle:1:3",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "tri:circle:0:3+circle:1:3+circle:1:4",
+      "kind": "number",
+      "locked": false,
+      "value": 2
+    },
+    {
+      "cell_id": "tri:circle:1:2+circle:1:3+circle:2:2",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "tri:circle:2:0+circle:2:1+circle:3:1",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "tri:circle:2:2+circle:2:3+circle:3:3",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "tri:circle:3:1+circle:3:2+circle:4:1",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "tri:circle:3:3+circle:3:4+circle:4:3",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    }
+  ],
+  "target_solution_edges": [
+    "arc:0:0:0",
+    "arc:0:1:0",
+    "arc:0:1:1",
+    "arc:0:1:2",
+    "arc:0:2:1",
+    "arc:0:2:2",
+    "arc:1:1:0",
+    "arc:1:1:2",
+    "arc:1:1:3",
+    "arc:1:2:1",
+    "arc:1:2:2",
+    "arc:1:3:1",
+    "arc:1:3:4",
+    "arc:1:3:5",
+    "arc:1:4:0",
+    "arc:1:4:1",
+    "arc:1:4:3",
+    "arc:1:4:4",
+    "arc:1:4:5",
+    "arc:2:0:5",
+    "arc:2:1:3",
+    "arc:2:2:4",
+    "arc:2:3:0",
+    "arc:2:3:2",
+    "arc:2:3:3",
+    "arc:2:3:5",
+    "arc:3:3:5",
+    "arc:3:4:0",
+    "arc:3:4:1",
+    "arc:3:4:2",
+    "arc:3:4:4",
+    "arc:3:4:5"
+  ],
+  "analysis": {
+    "status": "unique",
+    "solution_edges": [
+      "arc:0:0:0",
+      "arc:0:1:0",
+      "arc:0:1:1",
+      "arc:0:1:2",
+      "arc:0:2:1",
+      "arc:0:2:2",
+      "arc:1:1:0",
+      "arc:1:1:2",
+      "arc:1:1:3",
+      "arc:1:2:1",
+      "arc:1:2:2",
+      "arc:1:3:1",
+      "arc:1:3:4",
+      "arc:1:3:5",
+      "arc:1:4:0",
+      "arc:1:4:1",
+      "arc:1:4:3",
+      "arc:1:4:4",
+      "arc:1:4:5",
+      "arc:2:0:5",
+      "arc:2:1:3",
+      "arc:2:2:4",
+      "arc:2:3:0",
+      "arc:2:3:2",
+      "arc:2:3:3",
+      "arc:2:3:5",
+      "arc:3:3:5",
+      "arc:3:4:0",
+      "arc:3:4:1",
+      "arc:3:4:2",
+      "arc:3:4:4",
+      "arc:3:4:5"
+    ],
+    "puzzle_hash": "87543e7740339b51c31f1e15ec05a9ce7b1162f8fbc488d1d21045fbc0298cd1",
+    "elapsed_seconds": 0.06199999999807915,
+    "message": "题目有唯一解"
+  },
+  "metadata": {
+    "source_candidate": "028",
+    "generator": {
+      "seed": 20260713,
+      "time_limit": 25,
+      "elapsed_seconds": 25.0,
+      "numeric_clues": 12,
+      "pi_clues": 6,
+      "proven_minimal_numbers": false
+    },
+    "difficulty": {
+      "label": "medium",
+      "level": 3,
+      "logical_steps": 38,
+      "unresolved_edges": 94,
+      "total_edges": 132,
+      "score": 82.333,
+      "techniques": [
+        "数字填满",
+        "数字完成",
+        "顶点度数"
+      ],
+      "loop_edges": 32,
+      "circle_transitions": 16,
+      "coverage_ratio": 0.748
+    },
+    "id": "TSH-09",
+    "title": "TSH-09",
+    "curated_difficulty": "中级 Medium",
+    "playtest_status": "pending_two_testers",
+    "difficulty_level": 3,
+    "difficulty_tier": "medium"
+  }
+}

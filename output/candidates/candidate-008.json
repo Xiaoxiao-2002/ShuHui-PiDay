@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "variant": "circle_pack",
+  "board": {
+    "row_lengths": [
+      4,
+      3,
+      4,
+      3
+    ]
+  },
+  "clues": [
+    {
+      "cell_id": "circle:0:2",
+      "kind": "number",
+      "locked": false,
+      "value": 2
+    },
+    {
+      "cell_id": "circle:0:3",
+      "kind": "pi",
+      "locked": false
+    },
+    {
+      "cell_id": "circle:2:2",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "tri:circle:1:1+circle:1:2+circle:2:2",
+      "kind": "pi",
+      "locked": false
+    }
+  ],
+  "target_solution_edges": [
+    "arc:0:2:0",
+    "arc:0:2:1",
+    "arc:0:3:0",
+    "arc:0:3:1",
+    "arc:0:3:3",
+    "arc:0:3:4",
+    "arc:0:3:5",
+    "arc:1:1:5",
+    "arc:1:2:0",
+    "arc:1:2:1",
+    "arc:1:2:2",
+    "arc:1:2:5"
+  ],
+  "analysis": {
+    "status": "unique",
+    "solution_edges": [
+      "arc:0:2:0",
+      "arc:0:2:1",
+      "arc:0:3:0",
+      "arc:0:3:1",
+      "arc:0:3:3",
+      "arc:0:3:4",
+      "arc:0:3:5",
+      "arc:1:1:5",
+      "arc:1:2:0",
+      "arc:1:2:1",
+      "arc:1:2:2",
+      "arc:1:2:5"
+    ],
+    "puzzle_hash": "eb4012bfc16f6e2d60ab9d69b1d63e4956e3f851853edcdc8e6ef74d3ed1d21f",
+    "elapsed_seconds": 0.0940000000409782,
+    "message": "题目有唯一解"
+  },
+  "metadata": {
+    "seed": 20316134,
+    "target_fingerprint": "742012340c551e1c",
+    "target_edge_count": 12,
+    "generator": {
+      "seed": 20316134,
+      "time_limit": 2.0,
+      "elapsed_seconds": 1.922,
+      "numeric_clues": 2,
+      "pi_clues": 2,
+      "proven_minimal_numbers": true
+    },
+    "difficulty": {
+      "label": "hard",
+      "logical_steps": 13,
+      "unresolved_edges": 71,
+      "total_edges": 84,
+      "score": 101.765,
+      "techniques": [
+        "π 六方向",
+        "数字完成",
+        "顶点度数"
+      ]
+    },
+    "candidate_index": 8,
+    "playtest_status": "pending"
+  }
+}

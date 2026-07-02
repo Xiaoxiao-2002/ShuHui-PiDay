@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "D:\MyDesign\游戏程序\数回\scripts\build_advanced_pack.py", line 194, in <module>
+    if __name__ == "__main__":
+                         ^^^^^^
+  File "D:\MyDesign\游戏程序\数回\scripts\build_advanced_pack.py", line 95, in main
+    if report.level != spec["level"]:
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: TSH-15 自动评为 4 级而非 5 级；score=69.6, loop=100, transitions=56

@@ -1,0 +1,920 @@
+{
+  "schema_version": 1,
+  "variant": "circle_pack",
+  "board": {
+    "row_lengths": [
+      11,
+      12,
+      13,
+      12,
+      11,
+      12,
+      13,
+      12,
+      11,
+      12,
+      13,
+      12
+    ]
+  },
+  "clues": [
+    {
+      "cell_id": "circle:0:10",
+      "kind": "pi",
+      "locked": false
+    },
+    {
+      "cell_id": "circle:0:8",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "circle:10:1",
+      "kind": "pi",
+      "locked": false
+    },
+    {
+      "cell_id": "circle:10:10",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "circle:10:3",
+      "kind": "number",
+      "locked": false,
+      "value": 3
+    },
+    {
+      "cell_id": "circle:10:4",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "circle:10:6",
+      "kind": "number",
+      "locked": false,
+      "value": 2
+    },
+    {
+      "cell_id": "circle:11:1",
+      "kind": "number",
+      "locked": false,
+      "value": 4
+    },
+    {
+      "cell_id": "circle:11:8",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "circle:1:10",
+      "kind": "number",
+      "locked": false,
+      "value": 3
+    },
+    {
+      "cell_id": "circle:1:11",
+      "kind": "number",
+      "locked": false,
+      "value": 4
+    },
+    {
+      "cell_id": "circle:1:7",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "circle:2:10",
+      "kind": "number",
+      "locked": false,
+      "value": 2
+    },
+    {
+      "cell_id": "circle:2:11",
+      "kind": "number",
+      "locked": false,
+      "value": 2
+    },
+    {
+      "cell_id": "circle:2:7",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "circle:2:9",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "circle:3:11",
+      "kind": "number",
+      "locked": false,
+      "value": 5
+    },
+    {
+      "cell_id": "circle:3:6",
+      "kind": "pi",
+      "locked": false
+    },
+    {
+      "cell_id": "circle:3:7",
+      "kind": "number",
+      "locked": false,
+      "value": 3
+    },
+    {
+      "cell_id": "circle:4:10",
+      "kind": "pi",
+      "locked": false
+    },
+    {
+      "cell_id": "circle:4:5",
+      "kind": "pi",
+      "locked": false
+    },
+    {
+      "cell_id": "circle:4:8",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "circle:5:1",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "circle:5:4",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "circle:5:5",
+      "kind": "number",
+      "locked": false,
+      "value": 3
+    },
+    {
+      "cell_id": "circle:6:2",
+      "kind": "number",
+      "locked": false,
+      "value": 3
+    },
+    {
+      "cell_id": "circle:6:5",
+      "kind": "number",
+      "locked": false,
+      "value": 3
+    },
+    {
+      "cell_id": "circle:6:8",
+      "kind": "number",
+      "locked": false,
+      "value": 4
+    },
+    {
+      "cell_id": "circle:7:1",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "circle:7:10",
+      "kind": "pi",
+      "locked": false
+    },
+    {
+      "cell_id": "circle:7:3",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "circle:7:5",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "circle:7:6",
+      "kind": "number",
+      "locked": false,
+      "value": 2
+    },
+    {
+      "cell_id": "circle:7:7",
+      "kind": "number",
+      "locked": false,
+      "value": 2
+    },
+    {
+      "cell_id": "circle:7:8",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "circle:8:1",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "circle:9:0",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "circle:9:2",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "circle:9:5",
+      "kind": "number",
+      "locked": false,
+      "value": 2
+    },
+    {
+      "cell_id": "tri:circle:0:8+circle:0:9+circle:1:9",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "tri:circle:10:2+circle:11:1+circle:11:2",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "tri:circle:10:3+circle:9:2+circle:9:3",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "tri:circle:10:4+circle:10:5+circle:9:4",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "tri:circle:10:4+circle:11:3+circle:11:4",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "tri:circle:10:5+circle:10:6+circle:9:5",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "tri:circle:10:6+circle:10:7+circle:11:6",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "tri:circle:10:7+circle:10:8+circle:11:7",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "tri:circle:10:7+circle:9:6+circle:9:7",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "tri:circle:10:8+circle:9:7+circle:9:8",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "tri:circle:10:9+circle:9:8+circle:9:9",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "tri:circle:1:10+circle:1:11+circle:2:11",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "tri:circle:1:10+circle:1:9+circle:2:10",
+      "kind": "number",
+      "locked": false,
+      "value": 2
+    },
+    {
+      "cell_id": "tri:circle:1:6+circle:1:7+circle:2:7",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "tri:circle:1:8+circle:1:9+circle:2:9",
+      "kind": "number",
+      "locked": false,
+      "value": 2
+    },
+    {
+      "cell_id": "tri:circle:2:10+circle:2:11+circle:3:10",
+      "kind": "number",
+      "locked": false,
+      "value": 2
+    },
+    {
+      "cell_id": "tri:circle:2:6+circle:3:5+circle:3:6",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "tri:circle:2:7+circle:2:8+circle:3:7",
+      "kind": "number",
+      "locked": false,
+      "value": 2
+    },
+    {
+      "cell_id": "tri:circle:3:4+circle:3:5+circle:4:4",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "tri:circle:3:7+circle:3:8+circle:4:7",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "tri:circle:3:8+circle:3:9+circle:4:8",
+      "kind": "number",
+      "locked": false,
+      "value": 2
+    },
+    {
+      "cell_id": "tri:circle:4:1+circle:4:2+circle:5:2",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "tri:circle:4:2+circle:4:3+circle:5:3",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "tri:circle:4:6+circle:4:7+circle:5:7",
+      "kind": "number",
+      "locked": false,
+      "value": 2
+    },
+    {
+      "cell_id": "tri:circle:4:6+circle:5:6+circle:5:7",
+      "kind": "number",
+      "locked": false,
+      "value": 2
+    },
+    {
+      "cell_id": "tri:circle:4:8+circle:4:9+circle:5:9",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "tri:circle:5:0+circle:5:1+circle:6:1",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "tri:circle:5:10+circle:5:11+circle:6:11",
+      "kind": "number",
+      "locked": false,
+      "value": 2
+    },
+    {
+      "cell_id": "tri:circle:5:10+circle:6:10+circle:6:11",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "tri:circle:5:2+circle:5:3+circle:6:3",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "tri:circle:5:3+circle:6:3+circle:6:4",
+      "kind": "number",
+      "locked": false,
+      "value": 2
+    },
+    {
+      "cell_id": "tri:circle:5:4+circle:6:4+circle:6:5",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "tri:circle:5:6+circle:6:6+circle:6:7",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "tri:circle:6:1+circle:6:2+circle:7:1",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "tri:circle:6:10+circle:6:9+circle:7:9",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "tri:circle:6:10+circle:7:10+circle:7:9",
+      "kind": "number",
+      "locked": false,
+      "value": 2
+    },
+    {
+      "cell_id": "tri:circle:6:11+circle:6:12+circle:7:11",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "tri:circle:6:3+circle:6:4+circle:7:3",
+      "kind": "number",
+      "locked": false,
+      "value": 2
+    },
+    {
+      "cell_id": "tri:circle:6:6+circle:7:5+circle:7:6",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "tri:circle:6:7+circle:6:8+circle:7:7",
+      "kind": "number",
+      "locked": false,
+      "value": 2
+    },
+    {
+      "cell_id": "tri:circle:6:8+circle:6:9+circle:7:8",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "tri:circle:7:10+circle:7:11+circle:8:10",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "tri:circle:7:10+circle:7:9+circle:8:9",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "tri:circle:7:3+circle:7:4+circle:8:3",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "tri:circle:7:6+circle:7:7+circle:8:6",
+      "kind": "number",
+      "locked": false,
+      "value": 2
+    },
+    {
+      "cell_id": "tri:circle:7:7+circle:8:6+circle:8:7",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "tri:circle:8:1+circle:8:2+circle:9:2",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "tri:circle:8:3+circle:9:3+circle:9:4",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "tri:circle:8:4+circle:8:5+circle:9:5",
+      "kind": "number",
+      "locked": false,
+      "value": 2
+    },
+    {
+      "cell_id": "tri:circle:8:4+circle:9:4+circle:9:5",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "tri:circle:8:5+circle:8:6+circle:9:6",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "tri:circle:8:9+circle:9:10+circle:9:9",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    }
+  ],
+  "target_solution_edges": [
+    "arc:0:10:1",
+    "arc:0:8:1",
+    "arc:0:9:1",
+    "arc:10:1:0",
+    "arc:10:2:1",
+    "arc:10:2:2",
+    "arc:10:3:0",
+    "arc:10:3:1",
+    "arc:10:3:5",
+    "arc:10:5:4",
+    "arc:10:5:5",
+    "arc:10:6:1",
+    "arc:10:6:2",
+    "arc:10:7:1",
+    "arc:11:1:0",
+    "arc:11:1:1",
+    "arc:11:1:2",
+    "arc:11:1:3",
+    "arc:11:2:0",
+    "arc:11:2:1",
+    "arc:11:2:2",
+    "arc:11:2:4",
+    "arc:11:3:0",
+    "arc:11:3:1",
+    "arc:11:3:2",
+    "arc:11:4:0",
+    "arc:11:4:1",
+    "arc:11:4:2",
+    "arc:11:5:0",
+    "arc:11:5:1",
+    "arc:11:5:2",
+    "arc:11:6:0",
+    "arc:11:6:1",
+    "arc:11:6:2",
+    "arc:11:6:4",
+    "arc:11:7:0",
+    "arc:11:7:1",
+    "arc:11:7:2",
+    "arc:11:7:4",
+    "arc:11:7:5",
+    "arc:1:10:1",
+    "arc:1:10:2",
+    "arc:1:10:4",
+    "arc:1:11:0",
+    "arc:1:11:1",
+    "arc:1:11:4",
+    "arc:1:11:5",
+    "arc:1:7:0",
+    "arc:1:8:0",
+    "arc:1:8:1",
+    "arc:1:8:3",
+    "arc:1:8:4",
+    "arc:1:9:0",
+    "arc:1:9:1",
+    "arc:1:9:2",
+    "arc:1:9:4",
+    "arc:2:10:0",
+    "arc:2:10:1",
+    "arc:2:11:2",
+    "arc:2:11:4",
+    "arc:2:7:1",
+    "arc:2:8:0",
+    "arc:2:8:2",
+    "arc:2:8:3",
+    "arc:2:8:5",
+    "arc:3:10:1",
+    "arc:3:10:5",
+    "arc:3:11:0",
+    "arc:3:11:1",
+    "arc:3:11:3",
+    "arc:3:11:4",
+    "arc:3:11:5",
+    "arc:3:6:5",
+    "arc:3:7:1",
+    "arc:3:7:2",
+    "arc:3:7:4",
+    "arc:3:8:0",
+    "arc:3:8:4",
+    "arc:3:8:5",
+    "arc:3:9:0",
+    "arc:3:9:1",
+    "arc:3:9:5",
+    "arc:4:10:4",
+    "arc:4:4:0",
+    "arc:4:5:2",
+    "arc:4:7:2",
+    "arc:4:7:3",
+    "arc:4:8:4",
+    "arc:4:9:0",
+    "arc:4:9:5",
+    "arc:5:10:4",
+    "arc:5:10:5",
+    "arc:5:11:2",
+    "arc:5:2:1",
+    "arc:5:3:1",
+    "arc:5:5:2",
+    "arc:5:5:3",
+    "arc:5:5:5",
+    "arc:5:6:3",
+    "arc:5:6:4",
+    "arc:5:6:5",
+    "arc:5:7:3",
+    "arc:5:7:4",
+    "arc:6:10:0",
+    "arc:6:11:3",
+    "arc:6:11:4",
+    "arc:6:2:0",
+    "arc:6:2:1",
+    "arc:6:2:5",
+    "arc:6:3:0",
+    "arc:6:3:4",
+    "arc:6:4:1",
+    "arc:6:4:3",
+    "arc:6:5:0",
+    "arc:6:5:1",
+    "arc:6:5:5",
+    "arc:6:7:1",
+    "arc:6:8:2",
+    "arc:6:8:3",
+    "arc:6:8:4",
+    "arc:6:8:5",
+    "arc:6:9:1",
+    "arc:6:9:2",
+    "arc:7:10:3",
+    "arc:7:1:5",
+    "arc:7:2:2",
+    "arc:7:3:4",
+    "arc:7:4:4",
+    "arc:7:6:1",
+    "arc:7:6:5",
+    "arc:7:7:2",
+    "arc:7:7:4",
+    "arc:7:9:4",
+    "arc:7:9:5",
+    "arc:8:1:5",
+    "arc:8:2:2",
+    "arc:8:5:2",
+    "arc:8:5:3",
+    "arc:8:5:4",
+    "arc:8:6:4",
+    "arc:9:2:5",
+    "arc:9:3:2",
+    "arc:9:4:0",
+    "arc:9:5:3",
+    "arc:9:5:4"
+  ],
+  "analysis": {
+    "status": "unique",
+    "solution_edges": [
+      "arc:0:10:1",
+      "arc:0:8:1",
+      "arc:0:9:1",
+      "arc:10:1:0",
+      "arc:10:2:1",
+      "arc:10:2:2",
+      "arc:10:3:0",
+      "arc:10:3:1",
+      "arc:10:3:5",
+      "arc:10:5:4",
+      "arc:10:5:5",
+      "arc:10:6:1",
+      "arc:10:6:2",
+      "arc:10:7:1",
+      "arc:11:1:0",
+      "arc:11:1:1",
+      "arc:11:1:2",
+      "arc:11:1:3",
+      "arc:11:2:0",
+      "arc:11:2:1",
+      "arc:11:2:2",
+      "arc:11:2:4",
+      "arc:11:3:0",
+      "arc:11:3:1",
+      "arc:11:3:2",
+      "arc:11:4:0",
+      "arc:11:4:1",
+      "arc:11:4:2",
+      "arc:11:5:0",
+      "arc:11:5:1",
+      "arc:11:5:2",
+      "arc:11:6:0",
+      "arc:11:6:1",
+      "arc:11:6:2",
+      "arc:11:6:4",
+      "arc:11:7:0",
+      "arc:11:7:1",
+      "arc:11:7:2",
+      "arc:11:7:4",
+      "arc:11:7:5",
+      "arc:1:10:1",
+      "arc:1:10:2",
+      "arc:1:10:4",
+      "arc:1:11:0",
+      "arc:1:11:1",
+      "arc:1:11:4",
+      "arc:1:11:5",
+      "arc:1:7:0",
+      "arc:1:8:0",
+      "arc:1:8:1",
+      "arc:1:8:3",
+      "arc:1:8:4",
+      "arc:1:9:0",
+      "arc:1:9:1",
+      "arc:1:9:2",
+      "arc:1:9:4",
+      "arc:2:10:0",
+      "arc:2:10:1",
+      "arc:2:11:2",
+      "arc:2:11:4",
+      "arc:2:7:1",
+      "arc:2:8:0",
+      "arc:2:8:2",
+      "arc:2:8:3",
+      "arc:2:8:5",
+      "arc:3:10:1",
+      "arc:3:10:5",
+      "arc:3:11:0",
+      "arc:3:11:1",
+      "arc:3:11:3",
+      "arc:3:11:4",
+      "arc:3:11:5",
+      "arc:3:6:5",
+      "arc:3:7:1",
+      "arc:3:7:2",
+      "arc:3:7:4",
+      "arc:3:8:0",
+      "arc:3:8:4",
+      "arc:3:8:5",
+      "arc:3:9:0",
+      "arc:3:9:1",
+      "arc:3:9:5",
+      "arc:4:10:4",
+      "arc:4:4:0",
+      "arc:4:5:2",
+      "arc:4:7:2",
+      "arc:4:7:3",
+      "arc:4:8:4",
+      "arc:4:9:0",
+      "arc:4:9:5",
+      "arc:5:10:4",
+      "arc:5:10:5",
+      "arc:5:11:2",
+      "arc:5:2:1",
+      "arc:5:3:1",
+      "arc:5:5:2",
+      "arc:5:5:3",
+      "arc:5:5:5",
+      "arc:5:6:3",
+      "arc:5:6:4",
+      "arc:5:6:5",
+      "arc:5:7:3",
+      "arc:5:7:4",
+      "arc:6:10:0",
+      "arc:6:11:3",
+      "arc:6:11:4",
+      "arc:6:2:0",
+      "arc:6:2:1",
+      "arc:6:2:5",
+      "arc:6:3:0",
+      "arc:6:3:4",
+      "arc:6:4:1",
+      "arc:6:4:3",
+      "arc:6:5:0",
+      "arc:6:5:1",
+      "arc:6:5:5",
+      "arc:6:7:1",
+      "arc:6:8:2",
+      "arc:6:8:3",
+      "arc:6:8:4",
+      "arc:6:8:5",
+      "arc:6:9:1",
+      "arc:6:9:2",
+      "arc:7:10:3",
+      "arc:7:1:5",
+      "arc:7:2:2",
+      "arc:7:3:4",
+      "arc:7:4:4",
+      "arc:7:6:1",
+      "arc:7:6:5",
+      "arc:7:7:2",
+      "arc:7:7:4",
+      "arc:7:9:4",
+      "arc:7:9:5",
+      "arc:8:1:5",
+      "arc:8:2:2",
+      "arc:8:5:2",
+      "arc:8:5:3",
+      "arc:8:5:4",
+      "arc:8:6:4",
+      "arc:9:2:5",
+      "arc:9:3:2",
+      "arc:9:4:0",
+      "arc:9:5:3",
+      "arc:9:5:4"
+    ],
+    "puzzle_hash": "76b377583b73f9c4a06fca6fe9acb8a1aa73c4f94ac25686b103f05772926ac9",
+    "elapsed_seconds": 2.764999999999418,
+    "message": "题目有唯一解"
+  },
+  "metadata": {
+    "seed": 5520,
+    "target_fingerprint": "f84747d9e82457e3",
+    "target_edge_count": 145,
+    "generator": {
+      "seed": 5520,
+      "time_limit": 1800,
+      "elapsed_seconds": 512.484,
+      "numeric_clues": 85,
+      "pi_clues": 6,
+      "proven_minimal_numbers": false
+    },
+    "difficulty": {
+      "label": "expert",
+      "level": 5,
+      "logical_steps": 158,
+      "unresolved_edges": 706,
+      "total_edges": 864,
+      "score": 81.82,
+      "techniques": [
+        "数字填满",
+        "数字完成",
+        "顶点度数"
+      ],
+      "loop_edges": 145,
+      "circle_transitions": 83,
+      "coverage_ratio": 0.881
+    },
+    "id": "TSH-18",
+    "title": "TSH-18",
+    "difficulty_level": 5,
+    "difficulty_tier": "expert",
+    "curated_difficulty": "专家 Expert",
+    "playtest_status": "pending_two_testers",
+    "advanced_generation_spec": {
+      "id": 18,
+      "level": 5,
+      "profile": [
+        11,
+        12,
+        13,
+        12,
+        11,
+        12,
+        13,
+        12,
+        11,
+        12,
+        13,
+        12
+      ],
+      "seed": 5520,
+      "min_edges": 140,
+      "max_edges": 300,
+      "attempts": 80000,
+      "seconds": 1800
+    }
+  }
+}

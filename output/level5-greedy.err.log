@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "D:\MyDesign\游戏程序\数回\scripts\build_advanced_pack.py", line 211, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "D:\MyDesign\游戏程序\数回\scripts\build_advanced_pack.py", line 112, in main
+    raise RuntimeError(
+RuntimeError: TSH-15 自动评为 5 级而非 5 级；score=84.8（要求至少 90.0），loop=156, transitions=100

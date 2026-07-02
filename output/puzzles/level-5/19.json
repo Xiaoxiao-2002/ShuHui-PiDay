@@ -1,0 +1,901 @@
+{
+  "schema_version": 1,
+  "variant": "circle_pack",
+  "board": {
+    "row_lengths": [
+      11,
+      12,
+      11,
+      12,
+      11,
+      12,
+      11,
+      12,
+      11,
+      12,
+      11,
+      12
+    ]
+  },
+  "clues": [
+    {
+      "cell_id": "circle:10:10",
+      "kind": "number",
+      "locked": false,
+      "value": 4
+    },
+    {
+      "cell_id": "circle:10:2",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "circle:10:3",
+      "kind": "number",
+      "locked": false,
+      "value": 3
+    },
+    {
+      "cell_id": "circle:10:6",
+      "kind": "pi",
+      "locked": false
+    },
+    {
+      "cell_id": "circle:10:9",
+      "kind": "pi",
+      "locked": false
+    },
+    {
+      "cell_id": "circle:11:10",
+      "kind": "number",
+      "locked": false,
+      "value": 4
+    },
+    {
+      "cell_id": "circle:11:5",
+      "kind": "number",
+      "locked": false,
+      "value": 3
+    },
+    {
+      "cell_id": "circle:11:8",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "circle:11:9",
+      "kind": "number",
+      "locked": false,
+      "value": 4
+    },
+    {
+      "cell_id": "circle:2:10",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "circle:2:7",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "circle:2:8",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "circle:3:10",
+      "kind": "pi",
+      "locked": false
+    },
+    {
+      "cell_id": "circle:3:2",
+      "kind": "pi",
+      "locked": false
+    },
+    {
+      "cell_id": "circle:3:4",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "circle:3:7",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "circle:4:2",
+      "kind": "number",
+      "locked": false,
+      "value": 2
+    },
+    {
+      "cell_id": "circle:4:4",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "circle:4:7",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "circle:4:9",
+      "kind": "pi",
+      "locked": false
+    },
+    {
+      "cell_id": "circle:5:0",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "circle:5:1",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "circle:5:10",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "circle:5:11",
+      "kind": "number",
+      "locked": false,
+      "value": 4
+    },
+    {
+      "cell_id": "circle:5:3",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "circle:5:7",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "circle:5:8",
+      "kind": "pi",
+      "locked": false
+    },
+    {
+      "cell_id": "circle:6:1",
+      "kind": "number",
+      "locked": false,
+      "value": 2
+    },
+    {
+      "cell_id": "circle:6:10",
+      "kind": "number",
+      "locked": false,
+      "value": 2
+    },
+    {
+      "cell_id": "circle:6:5",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "circle:6:9",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "circle:7:0",
+      "kind": "number",
+      "locked": false,
+      "value": 2
+    },
+    {
+      "cell_id": "circle:7:1",
+      "kind": "number",
+      "locked": false,
+      "value": 3
+    },
+    {
+      "cell_id": "circle:7:11",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "circle:7:3",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "circle:7:6",
+      "kind": "number",
+      "locked": false,
+      "value": 3
+    },
+    {
+      "cell_id": "circle:7:9",
+      "kind": "number",
+      "locked": false,
+      "value": 3
+    },
+    {
+      "cell_id": "circle:8:1",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "circle:8:7",
+      "kind": "number",
+      "locked": false,
+      "value": 2
+    },
+    {
+      "cell_id": "circle:8:8",
+      "kind": "number",
+      "locked": false,
+      "value": 3
+    },
+    {
+      "cell_id": "circle:9:1",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "circle:9:3",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "circle:9:4",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "circle:9:8",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "circle:9:9",
+      "kind": "number",
+      "locked": false,
+      "value": 3
+    },
+    {
+      "cell_id": "tri:circle:10:3+circle:10:4+circle:11:4",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "tri:circle:10:3+circle:11:3+circle:11:4",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "tri:circle:10:4+circle:9:4+circle:9:5",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "tri:circle:10:5+circle:11:5+circle:11:6",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "tri:circle:10:5+circle:9:5+circle:9:6",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "tri:circle:10:6+circle:10:7+circle:11:7",
+      "kind": "number",
+      "locked": false,
+      "value": 2
+    },
+    {
+      "cell_id": "tri:circle:10:6+circle:11:6+circle:11:7",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "tri:circle:10:7+circle:10:8+circle:11:8",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "tri:circle:2:2+circle:3:2+circle:3:3",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "tri:circle:2:3+circle:3:3+circle:3:4",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "tri:circle:2:8+circle:2:9+circle:3:9",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "tri:circle:3:2+circle:3:3+circle:4:2",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "tri:circle:3:3+circle:4:2+circle:4:3",
+      "kind": "number",
+      "locked": false,
+      "value": 2
+    },
+    {
+      "cell_id": "tri:circle:3:8+circle:3:9+circle:4:8",
+      "kind": "number",
+      "locked": false,
+      "value": 2
+    },
+    {
+      "cell_id": "tri:circle:4:1+circle:5:1+circle:5:2",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "tri:circle:4:10+circle:4:9+circle:5:10",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "tri:circle:4:2+circle:4:3+circle:5:3",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "tri:circle:4:7+circle:4:8+circle:5:8",
+      "kind": "number",
+      "locked": false,
+      "value": 2
+    },
+    {
+      "cell_id": "tri:circle:5:1+circle:6:0+circle:6:1",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "tri:circle:5:2+circle:6:1+circle:6:2",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "tri:circle:5:3+circle:6:2+circle:6:3",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "tri:circle:5:4+circle:5:5+circle:6:4",
+      "kind": "number",
+      "locked": false,
+      "value": 2
+    },
+    {
+      "cell_id": "tri:circle:5:4+circle:6:3+circle:6:4",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "tri:circle:5:8+circle:5:9+circle:6:8",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "tri:circle:6:2+circle:7:2+circle:7:3",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "tri:circle:6:3+circle:7:3+circle:7:4",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "tri:circle:6:4+circle:7:4+circle:7:5",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "tri:circle:6:5+circle:7:5+circle:7:6",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "tri:circle:6:8+circle:7:8+circle:7:9",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "tri:circle:6:9+circle:7:10+circle:7:9",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "tri:circle:7:1+circle:7:2+circle:8:1",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "tri:circle:7:2+circle:7:3+circle:8:2",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "tri:circle:7:3+circle:8:2+circle:8:3",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "tri:circle:7:4+circle:7:5+circle:8:4",
+      "kind": "number",
+      "locked": false,
+      "value": 2
+    },
+    {
+      "cell_id": "tri:circle:7:4+circle:8:3+circle:8:4",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "tri:circle:7:5+circle:8:4+circle:8:5",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "tri:circle:7:7+circle:7:8+circle:8:7",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "tri:circle:7:7+circle:8:6+circle:8:7",
+      "kind": "number",
+      "locked": false,
+      "value": 2
+    },
+    {
+      "cell_id": "tri:circle:7:8+circle:7:9+circle:8:8",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "tri:circle:7:9+circle:8:8+circle:8:9",
+      "kind": "number",
+      "locked": false,
+      "value": 2
+    },
+    {
+      "cell_id": "tri:circle:8:0+circle:8:1+circle:9:1",
+      "kind": "number",
+      "locked": false,
+      "value": 1
+    },
+    {
+      "cell_id": "tri:circle:8:10+circle:8:9+circle:9:10",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    },
+    {
+      "cell_id": "tri:circle:8:10+circle:9:10+circle:9:11",
+      "kind": "number",
+      "locked": false,
+      "value": 0
+    }
+  ],
+  "target_solution_edges": [
+    "arc:10:10:0",
+    "arc:10:10:1",
+    "arc:10:10:4",
+    "arc:10:10:5",
+    "arc:10:3:2",
+    "arc:10:3:3",
+    "arc:10:3:4",
+    "arc:10:6:0",
+    "arc:10:7:3",
+    "arc:10:7:4",
+    "arc:10:7:5",
+    "arc:10:8:0",
+    "arc:10:8:3",
+    "arc:10:8:4",
+    "arc:10:9:3",
+    "arc:11:10:0",
+    "arc:11:10:1",
+    "arc:11:10:2",
+    "arc:11:10:5",
+    "arc:11:3:0",
+    "arc:11:3:1",
+    "arc:11:3:2",
+    "arc:11:3:3",
+    "arc:11:3:4",
+    "arc:11:4:0",
+    "arc:11:4:1",
+    "arc:11:4:2",
+    "arc:11:5:0",
+    "arc:11:5:1",
+    "arc:11:5:2",
+    "arc:11:6:3",
+    "arc:11:6:4",
+    "arc:11:6:5",
+    "arc:11:7:0",
+    "arc:11:7:1",
+    "arc:11:7:2",
+    "arc:11:7:4",
+    "arc:11:7:5",
+    "arc:11:9:0",
+    "arc:11:9:1",
+    "arc:11:9:2",
+    "arc:11:9:3",
+    "arc:3:10:2",
+    "arc:3:2:1",
+    "arc:3:9:2",
+    "arc:3:9:3",
+    "arc:3:9:4",
+    "arc:3:9:5",
+    "arc:4:10:1",
+    "arc:4:10:2",
+    "arc:4:1:0",
+    "arc:4:1:5",
+    "arc:4:2:4",
+    "arc:4:2:5",
+    "arc:4:3:0",
+    "arc:4:3:3",
+    "arc:4:3:4",
+    "arc:4:3:5",
+    "arc:4:7:0",
+    "arc:4:8:1",
+    "arc:4:8:3",
+    "arc:4:8:4",
+    "arc:4:9:5",
+    "arc:5:11:0",
+    "arc:5:11:1",
+    "arc:5:11:4",
+    "arc:5:11:5",
+    "arc:5:1:0",
+    "arc:5:2:0",
+    "arc:5:2:1",
+    "arc:5:2:3",
+    "arc:5:3:2",
+    "arc:5:4:0",
+    "arc:5:4:4",
+    "arc:5:4:5",
+    "arc:5:8:4",
+    "arc:5:9:2",
+    "arc:5:9:3",
+    "arc:6:0:0",
+    "arc:6:0:2",
+    "arc:6:0:3",
+    "arc:6:0:4",
+    "arc:6:0:5",
+    "arc:6:10:3",
+    "arc:6:10:4",
+    "arc:6:1:0",
+    "arc:6:1:4",
+    "arc:6:2:1",
+    "arc:6:2:2",
+    "arc:6:2:5",
+    "arc:6:3:2",
+    "arc:6:4:0",
+    "arc:6:4:4",
+    "arc:6:4:5",
+    "arc:6:8:0",
+    "arc:6:8:5",
+    "arc:6:9:0",
+    "arc:7:0:0",
+    "arc:7:0:5",
+    "arc:7:10:3",
+    "arc:7:1:1",
+    "arc:7:1:4",
+    "arc:7:1:5",
+    "arc:7:2:1",
+    "arc:7:2:3",
+    "arc:7:3:4",
+    "arc:7:4:0",
+    "arc:7:5:0",
+    "arc:7:5:1",
+    "arc:7:5:3",
+    "arc:7:6:0",
+    "arc:7:6:1",
+    "arc:7:6:2",
+    "arc:7:7:1",
+    "arc:7:7:2",
+    "arc:7:8:0",
+    "arc:7:9:0",
+    "arc:7:9:1",
+    "arc:7:9:3",
+    "arc:8:0:0",
+    "arc:8:0:1",
+    "arc:8:0:2",
+    "arc:8:0:3",
+    "arc:8:0:5",
+    "arc:8:1:4",
+    "arc:8:2:4",
+    "arc:8:2:5",
+    "arc:8:3:2",
+    "arc:8:4:4",
+    "arc:8:6:0",
+    "arc:8:7:0",
+    "arc:8:7:3",
+    "arc:8:8:0",
+    "arc:8:8:3",
+    "arc:8:8:5",
+    "arc:9:10:1",
+    "arc:9:10:2",
+    "arc:9:3:5",
+    "arc:9:4:2",
+    "arc:9:7:4",
+    "arc:9:7:5",
+    "arc:9:8:3",
+    "arc:9:9:1",
+    "arc:9:9:4",
+    "arc:9:9:5"
+  ],
+  "analysis": {
+    "status": "unique",
+    "solution_edges": [
+      "arc:10:10:0",
+      "arc:10:10:1",
+      "arc:10:10:4",
+      "arc:10:10:5",
+      "arc:10:3:2",
+      "arc:10:3:3",
+      "arc:10:3:4",
+      "arc:10:6:0",
+      "arc:10:7:3",
+      "arc:10:7:4",
+      "arc:10:7:5",
+      "arc:10:8:0",
+      "arc:10:8:3",
+      "arc:10:8:4",
+      "arc:10:9:3",
+      "arc:11:10:0",
+      "arc:11:10:1",
+      "arc:11:10:2",
+      "arc:11:10:5",
+      "arc:11:3:0",
+      "arc:11:3:1",
+      "arc:11:3:2",
+      "arc:11:3:3",
+      "arc:11:3:4",
+      "arc:11:4:0",
+      "arc:11:4:1",
+      "arc:11:4:2",
+      "arc:11:5:0",
+      "arc:11:5:1",
+      "arc:11:5:2",
+      "arc:11:6:3",
+      "arc:11:6:4",
+      "arc:11:6:5",
+      "arc:11:7:0",
+      "arc:11:7:1",
+      "arc:11:7:2",
+      "arc:11:7:4",
+      "arc:11:7:5",
+      "arc:11:9:0",
+      "arc:11:9:1",
+      "arc:11:9:2",
+      "arc:11:9:3",
+      "arc:3:10:2",
+      "arc:3:2:1",
+      "arc:3:9:2",
+      "arc:3:9:3",
+      "arc:3:9:4",
+      "arc:3:9:5",
+      "arc:4:10:1",
+      "arc:4:10:2",
+      "arc:4:1:0",
+      "arc:4:1:5",
+      "arc:4:2:4",
+      "arc:4:2:5",
+      "arc:4:3:0",
+      "arc:4:3:3",
+      "arc:4:3:4",
+      "arc:4:3:5",
+      "arc:4:7:0",
+      "arc:4:8:1",
+      "arc:4:8:3",
+      "arc:4:8:4",
+      "arc:4:9:5",
+      "arc:5:11:0",
+      "arc:5:11:1",
+      "arc:5:11:4",
+      "arc:5:11:5",
+      "arc:5:1:0",
+      "arc:5:2:0",
+      "arc:5:2:1",
+      "arc:5:2:3",
+      "arc:5:3:2",
+      "arc:5:4:0",
+      "arc:5:4:4",
+      "arc:5:4:5",
+      "arc:5:8:4",
+      "arc:5:9:2",
+      "arc:5:9:3",
+      "arc:6:0:0",
+      "arc:6:0:2",
+      "arc:6:0:3",
+      "arc:6:0:4",
+      "arc:6:0:5",
+      "arc:6:10:3",
+      "arc:6:10:4",
+      "arc:6:1:0",
+      "arc:6:1:4",
+      "arc:6:2:1",
+      "arc:6:2:2",
+      "arc:6:2:5",
+      "arc:6:3:2",
+      "arc:6:4:0",
+      "arc:6:4:4",
+      "arc:6:4:5",
+      "arc:6:8:0",
+      "arc:6:8:5",
+      "arc:6:9:0",
+      "arc:7:0:0",
+      "arc:7:0:5",
+      "arc:7:10:3",
+      "arc:7:1:1",
+      "arc:7:1:4",
+      "arc:7:1:5",
+      "arc:7:2:1",
+      "arc:7:2:3",
+      "arc:7:3:4",
+      "arc:7:4:0",
+      "arc:7:5:0",
+      "arc:7:5:1",
+      "arc:7:5:3",
+      "arc:7:6:0",
+      "arc:7:6:1",
+      "arc:7:6:2",
+      "arc:7:7:1",
+      "arc:7:7:2",
+      "arc:7:8:0",
+      "arc:7:9:0",
+      "arc:7:9:1",
+      "arc:7:9:3",
+      "arc:8:0:0",
+      "arc:8:0:1",
+      "arc:8:0:2",
+      "arc:8:0:3",
+      "arc:8:0:5",
+      "arc:8:1:4",
+      "arc:8:2:4",
+      "arc:8:2:5",
+      "arc:8:3:2",
+      "arc:8:4:4",
+      "arc:8:6:0",
+      "arc:8:7:0",
+      "arc:8:7:3",
+      "arc:8:8:0",
+      "arc:8:8:3",
+      "arc:8:8:5",
+      "arc:9:10:1",
+      "arc:9:10:2",
+      "arc:9:3:5",
+      "arc:9:4:2",
+      "arc:9:7:4",
+      "arc:9:7:5",
+      "arc:9:8:3",
+      "arc:9:9:1",
+      "arc:9:9:4",
+      "arc:9:9:5"
+    ],
+    "puzzle_hash": "32ed99b78899c0acf81cc32b8f7a45262c0359c3fdb30bf46eb924cb45d40b1c",
+    "elapsed_seconds": 0.8439999999973224,
+    "message": "题目有唯一解"
+  },
+  "metadata": {
+    "seed": 5519,
+    "target_fingerprint": "7ee17e6bc9102c81",
+    "target_edge_count": 145,
+    "generator": {
+      "seed": 5519,
+      "time_limit": 1800,
+      "elapsed_seconds": 357.719,
+      "numeric_clues": 82,
+      "pi_clues": 6,
+      "proven_minimal_numbers": false
+    },
+    "difficulty": {
+      "label": "expert",
+      "level": 5,
+      "logical_steps": 132,
+      "unresolved_edges": 696,
+      "total_edges": 828,
+      "score": 82.696,
+      "techniques": [
+        "数字完成",
+        "顶点度数"
+      ],
+      "loop_edges": 145,
+      "circle_transitions": 75,
+      "coverage_ratio": 0.848
+    },
+    "id": "TSH-19",
+    "title": "TSH-19",
+    "difficulty_level": 5,
+    "difficulty_tier": "expert",
+    "curated_difficulty": "专家 Expert",
+    "playtest_status": "pending_two_testers",
+    "advanced_generation_spec": {
+      "id": 19,
+      "level": 5,
+      "profile": [
+        11,
+        12,
+        11,
+        12,
+        11,
+        12,
+        11,
+        12,
+        11,
+        12,
+        11,
+        12
+      ],
+      "seed": 5519,
+      "min_edges": 145,
+      "max_edges": 270,
+      "attempts": 35000,
+      "seconds": 1800
+    }
+  }
+}
