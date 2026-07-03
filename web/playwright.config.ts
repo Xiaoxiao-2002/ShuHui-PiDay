@@ -14,7 +14,7 @@ export default defineConfig({
     { name: "mobile-chromium", use: { ...devices["iPhone 13"], browserName: "chromium" } },
   ],
   webServer: {
-    command: "npm.cmd run build && node scripts/serve-lan.mjs 4173",
+    command: "npm run build && node scripts/serve-lan.mjs 4173",
     url: "http://127.0.0.1:4173/ShuHui-PiDay/",
     reuseExistingServer: !process.env.CI,
     timeout: 120_000,
