@@ -33,8 +33,19 @@ test("mobile player can finish all tutorial lessons", async ({ page }, testInfo)
   await next.click();
   await page.getByRole("button", { name: /A · 一条连通曲线/ }).click();
   await next.click();
-  const directionButtons = page.locator(".direction-edge-buttons button");
+
+  await page.getByRole("button", { name: "同时邻接两个 π 单元格的共享圆弧" }).click();
+  await expect(page.locator(".pi-count-explanation")).toContainText("进入统计集合 1 条");
+  await next.click();
+  for (let sector = 1; sector <= 6; sector += 1) await page.getByRole("button", { name: `观察第 ${sector} 类圆弧` }).click();
+  await next.click();
+  const directionButtons = page.locator(".pi-candidate-edges button");
   for (let index = 0; index < 6; index += 1) await directionButtons.nth(index).click();
+  await directionButtons.nth(6).click();
+  await expect(page.getByText(/某一类出现了两条/)).toBeVisible();
+  await expect(next).toBeDisabled();
+  await directionButtons.nth(6).click();
+  await expect(next).toBeEnabled();
   await next.click();
   for (const edgeId of outerEdges) await toggleEdge(page, edgeId);
   await page.getByRole("button", { name: "检查我的闭环" }).click();

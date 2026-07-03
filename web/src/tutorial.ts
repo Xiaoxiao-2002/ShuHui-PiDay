@@ -12,7 +12,7 @@ export function loadTutorialProgress(): TutorialProgressV1 {
   try {
     const saved = JSON.parse(localStorage.getItem(KEY) ?? "null") as TutorialProgressV1 | null;
     if (saved?.schemaVersion === 1) {
-      return { schemaVersion: 1, step: Math.max(0, Math.min(5, saved.step)), completed: Boolean(saved.completed) };
+      return { schemaVersion: 1, step: Math.max(0, Math.min(7, saved.step)), completed: Boolean(saved.completed) };
     }
   } catch {
     // Restricted or malformed storage should never block the tutorial.
@@ -21,7 +21,7 @@ export function loadTutorialProgress(): TutorialProgressV1 {
 }
 
 export function saveTutorialProgress(step: number, completed = false): TutorialProgressV1 {
-  const progress = { schemaVersion: 1 as const, step: Math.max(0, Math.min(5, step)), completed };
+  const progress = { schemaVersion: 1 as const, step: Math.max(0, Math.min(7, step)), completed };
   try {
     localStorage.setItem(KEY, JSON.stringify(progress));
   } catch {

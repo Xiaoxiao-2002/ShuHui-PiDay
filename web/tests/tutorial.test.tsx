@@ -12,8 +12,8 @@ describe("tutorial data", () => {
     expect(loadTutorialProgress()).toMatchObject({ step: 0, completed: false });
     saveTutorialProgress(3);
     expect(loadTutorialProgress()).toMatchObject({ step: 3, completed: false });
-    saveTutorialProgress(5, true);
-    expect(loadTutorialProgress()).toMatchObject({ step: 5, completed: true });
+    saveTutorialProgress(7, true);
+    expect(loadTutorialProgress()).toMatchObject({ step: 7, completed: true });
   });
 
   it("has a valid guided-practice solution", () => {
@@ -46,8 +46,22 @@ describe("TutorialPage", () => {
     expect(next()).toBeEnabled();
     await user.click(next());
 
-    const directionButtons = container.querySelectorAll<HTMLButtonElement>(".direction-edge-buttons button");
+    await user.click(screen.getByRole("button", { name: "同时邻接两个 π 单元格的共享圆弧" }));
+    expect(screen.getByText(/进入统计集合/).closest("span")).toHaveTextContent("1 条");
+    expect(next()).toBeEnabled();
+    await user.click(next());
+
+    for (let sector = 1; sector <= 6; sector += 1) await user.click(screen.getByRole("button", { name: `观察第 ${sector} 类圆弧` }));
+    expect(next()).toBeEnabled();
+    await user.click(next());
+
+    const directionButtons = container.querySelectorAll<HTMLButtonElement>(".pi-candidate-edges button");
     for (const button of Array.from(directionButtons).slice(0, 6)) await user.click(button);
+    expect(next()).toBeEnabled();
+    await user.click(directionButtons[6]);
+    expect(screen.getByText(/某一类出现了两条/)).toBeVisible();
+    expect(next()).toBeDisabled();
+    await user.click(directionButtons[6]);
     expect(next()).toBeEnabled();
     await user.click(next());
 

@@ -14,11 +14,11 @@ const lessons = [
   { title: "数字告诉你经过几条弧", kicker: "数字提示" },
   { title: "端点与分叉都不允许", kicker: "顶点规则" },
   { title: "所有曲线必须连成一个环", kicker: "单一闭环" },
-  { title: "让 π 的六种方向各出现一次", kicker: "π 提示" },
+  { title: "先找出哪些弧归 π 管", kicker: "π · 范围" },
+  { title: "认识六类圆弧", kicker: "π · 分类" },
+  { title: "六类圆弧必须恰好各一条", kicker: "π · 规则" },
   { title: "亲手完成一个小闭环", kicker: "综合练习" },
 ];
-
-const directionLabels = ["→", "↘", "↙", "←", "↖", "↗"];
 
 function polar(cx: number, cy: number, radius: number, degrees: number) {
   const radians = (degrees * Math.PI) / 180;
@@ -51,6 +51,21 @@ function ArcButton({ index, selected, onToggle, label, className = "" }: { index
       <path className="tutorial-arc-visible" d={path} />
       <path className="tutorial-arc-hit" d={path} />
     </g>
+  );
+}
+
+function sectorPath(sector: number, cx = 30, cy = 30, radius = 21): string {
+  const start = polar(cx, cy, radius, sector * 60);
+  const end = polar(cx, cy, radius, (sector + 1) * 60);
+  return `M ${start.x} ${start.y} A ${radius} ${radius} 0 0 1 ${end.x} ${end.y}`;
+}
+
+function SectorGlyph({ sector, active = true }: { sector: number; active?: boolean }) {
+  return (
+    <svg className="sector-glyph" viewBox="0 0 60 60" aria-hidden="true">
+      <circle cx="30" cy="30" r="21" />
+      <path d={sectorPath(sector)} className={active ? "active" : ""} />
+    </svg>
   );
 }
 
@@ -160,10 +175,64 @@ function LessonLoop({ onReady }: { onReady: (ready: boolean) => void }) {
   );
 }
 
-function LessonPi({ onReady }: { onReady: (ready: boolean) => void }) {
+function LessonPiScope({ onReady }: { onReady: (ready: boolean) => void }) {
+  const [selected, setSelected] = useState(false);
+  const chooseSharedArc = () => {
+    setSelected(true);
+    onReady(true);
+  };
+  return (
+    <div className="tutorial-demo pi-scope-demo">
+      <p className="pi-lesson-lead">先把所有带 π 的单元格放在一起看。只要一条已选弧与<strong>至少一个</strong> π 单元格相邻，它就进入 π 的统计范围。</p>
+      <svg viewBox="0 0 360 220" aria-label="圆单元格与圆隙三角形共享一条物理圆弧">
+        <circle cx="122" cy="108" r="70" className="pi-scope-circle" />
+        <path d="M 192 108 Q 230 111 246 166 Q 197 185 157 169" className="pi-scope-triangle" />
+        <text x="110" y="110" className="pi-scope-symbol">π</text>
+        <text x="213" y="151" className="pi-scope-symbol small">π</text>
+        <g role="button" tabIndex={0} aria-label="同时邻接两个 π 单元格的共享圆弧" aria-pressed={selected} onClick={chooseSharedArc} onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") chooseSharedArc(); }}>
+          <path d={sectorPath(0, 122, 108, 70)} className={`pi-shared-visible ${selected ? "selected" : "attention"}`} />
+          <path d={sectorPath(0, 122, 108, 70)} className="pi-shared-hit" />
+        </g>
+        <text x="270" y="93" className="pi-scope-label">点击共享弧</text>
+      </svg>
+      <div className="pi-count-explanation">
+        <span>它邻接 π 单元格 <b>2 个</b></span><strong>但它是同一条物理弧</strong><span>进入统计集合 <b>{selected ? 1 : 0} 条</b></span>
+      </div>
+      <div className={`tutorial-feedback ${selected ? "good" : "neutral"}`}>
+        {selected ? "正确。统计的是“不同的物理圆弧”，不是“它碰到了几个 π”。所以这条共享弧只出现一次。" : "请点击橙色共享弧，看看它究竟会被统计几次。"}
+      </div>
+    </div>
+  );
+}
+
+function LessonPiSectors({ onReady }: { onReady: (ready: boolean) => void }) {
+  const [seen, setSeen] = useState<Set<number>>(new Set());
+  const inspect = (sector: number) => {
+    const next = new Set(seen).add(sector);
+    setSeen(next);
+    onReady(next.size === 6);
+  };
+  return (
+    <div className="tutorial-demo pi-sector-demo">
+      <div className="pi-key-idea"><b>关键：</b>这里的“方向”不是箭头指向，而是圆周被六个相切点分成的<strong>六种固定位置</strong>。不同圆上处在同一位置的弧，属于同一类。</div>
+      <div className="sector-library" aria-label="六类圆弧图例">
+        {[0, 1, 2, 3, 4, 5].map((sector) => (
+          <button key={sector} className={seen.has(sector) ? "seen" : ""} onClick={() => inspect(sector)} aria-label={`观察第 ${sector + 1} 类圆弧`}>
+            <SectorGlyph sector={sector} /><span>第 {sector + 1} 类</span><i>{seen.has(sector) ? "已观察 ✓" : "点击观察"}</i>
+          </button>
+        ))}
+      </div>
+      <div className={`tutorial-feedback ${seen.size === 6 ? "good" : "neutral"}`}>
+        {seen.size === 6 ? "六类圆弧合起来正好能拼成一个完整圆周。这就是 π 规则所说的“六种圆弧方向”。" : `请依次点击六张图，观察橙色弧在圆周上的位置。还剩 ${6 - seen.size} 类。`}
+      </div>
+    </div>
+  );
+}
+
+function LessonPiRule({ onReady }: { onReady: (ready: boolean) => void }) {
   const [selected, setSelected] = useState<Set<string>>(new Set());
-  const edges = [0, 1, 2, 3, 4, 5].map((sector) => ({ id: `main-${sector}`, sector, label: directionLabels[sector] }));
-  edges.push({ id: "duplicate-0", sector: 0, label: "→" });
+  const edges = [0, 1, 2, 3, 4, 5].map((sector) => ({ id: `main-${sector}`, sector }));
+  edges.push({ id: "duplicate-0", sector: 0 });
   const counts = useMemo(() => Array.from({ length: 6 }, (_, sector) => edges.filter((edge) => edge.sector === sector && selected.has(edge.id)).length), [selected]);
   const ready = counts.every((count) => count === 1);
   const toggle = (id: string) => {
@@ -174,30 +243,26 @@ function LessonPi({ onReady }: { onReady: (ready: boolean) => void }) {
     onReady(nextCounts.every((count) => count === 1));
   };
   return (
-    <div className="tutorial-demo pi-demo">
-      <div className="pi-visual-row">
-        <div className="pi-cells" aria-label="相邻的两个 π 单元格共享一条弧">
-          <span>π</span><i className="shared-pi-arc" /><span>π</span>
-          <small>同一条物理弧，只计算一次</small>
-        </div>
-        <div className="direction-compass" aria-label="π 六方向计数罗盘">
-          <div className="pi-center">π</div>
-          {counts.map((count, sector) => (
-            <div key={sector} className={`direction-slot slot-${sector} ${count === 1 ? "filled" : count > 1 ? "over" : ""}`}>
-              <span>{directionLabels[sector]}</span><b>{count}/1</b>
-            </div>
-          ))}
-        </div>
+    <div className="tutorial-demo pi-rule-demo">
+      <p className="pi-lesson-lead">现在只看“进入 π 统计范围的已选弧”。目标是让下面六个收集槽都<strong>恰好为 1/1</strong>。</p>
+      <div className="sector-collection" aria-label="π 六类圆弧计数">
+        {counts.map((count, sector) => (
+          <div key={sector} className={`${count === 1 ? "filled" : count > 1 ? "over" : ""}`}>
+            <SectorGlyph sector={sector} active={count > 0} /><span>第 {sector + 1} 类</span><b>{count}/1</b>
+          </div>
+        ))}
       </div>
-      <div className="direction-edge-buttons">
+      <div className="pi-candidate-heading"><span>下面每张卡代表一条不同的物理弧</span><small>最后一张是与第一张同类的干扰项</small></div>
+      <div className="pi-candidate-edges">
         {edges.map((edge) => (
           <button key={edge.id} className={`${selected.has(edge.id) ? "selected" : ""} ${counts[edge.sector] > 1 ? "over" : ""}`} onClick={() => toggle(edge.id)} aria-pressed={selected.has(edge.id)}>
-            <span>{edge.label}</span>{edge.id === "duplicate-0" ? "额外的同方向弧" : `方向 ${edge.label}`}
+            <SectorGlyph sector={edge.sector} />
+            <span>{edge.id === "duplicate-0" ? "另一个圆上的第 1 类" : `候选弧 · 第 ${edge.sector + 1} 类`}</span>
           </button>
         ))}
       </div>
       <div className={`tutorial-feedback ${ready ? "good" : counts.some((count) => count > 1) ? "bad" : "neutral"}`}>
-        {ready ? "六种方向恰好各一条，π 罗盘全部点亮！" : counts.some((count) => count > 1) ? "有一个方向出现了两次。删除该方向的一条弧，使每格回到 1/1。" : "点击方向弧，把六个方向槽依次点亮。留意：最右边还有一条重复方向的干扰弧。"}
+        {ready ? "完成：六类圆弧各选一条。把这六段按类别摆在一起，正好组成一个完整圆周。" : counts.some((count) => count > 1) ? "某一类出现了两条。即使它们来自不同圆，也属于同一类；请删掉其中一条。" : "请选择候选弧，填满六个槽。可以故意选择最后的同类干扰项，看看为什么不能重复。"}
       </div>
     </div>
   );
@@ -257,7 +322,7 @@ export function TutorialPage({ onBack, onComplete, onStartFirstPuzzle }: Props) 
           <div className="tutorial-finish-orbit">π</div>
           <p className="eyebrow dark">互动教程完成</p>
           <h1>你已经准备好挑战了！</h1>
-          <p>你已经掌握画线、数字、顶点、单一闭环和 π 六方向规则。</p>
+          <p>你已经掌握画线、数字、顶点、单一闭环和 π 六类圆弧规则。</p>
           <div className="finish-rule-badges"><span>数字 ✓</span><span>顶点 ✓</span><span>闭环 ✓</span><span>π ✓</span></div>
           <div className="tutorial-finish-actions">
             {onStartFirstPuzzle && <button className="primary-button" onClick={onStartFirstPuzzle}>挑战 TSH-01</button>}
@@ -287,8 +352,10 @@ export function TutorialPage({ onBack, onComplete, onStartFirstPuzzle }: Props) 
         {step === 1 && <LessonNumber onReady={setReady} />}
         {step === 2 && <LessonVertex onReady={setReady} />}
         {step === 3 && <LessonLoop onReady={setReady} />}
-        {step === 4 && <LessonPi onReady={setReady} />}
-        {step === 5 && <LessonPractice onReady={setReady} />}
+        {step === 4 && <LessonPiScope onReady={setReady} />}
+        {step === 5 && <LessonPiSectors onReady={setReady} />}
+        {step === 6 && <LessonPiRule onReady={setReady} />}
+        {step === 7 && <LessonPractice onReady={setReady} />}
       </section>
 
       <nav className="tutorial-nav" aria-label="教程步骤导航">

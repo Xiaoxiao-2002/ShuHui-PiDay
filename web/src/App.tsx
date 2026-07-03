@@ -121,9 +121,9 @@ export default function App() {
           <div className="tutorial-callout-copy">
             <p className="eyebrow">第一次玩特色数回？</p>
             <h2>{tutorialProgress.completed ? "随时重温互动教程" : "亲手操作，几分钟学会规则"}</h2>
-            <p>画一条弧、故意制造分叉、点亮 π 六方向，最后完成一题小练习。</p>
+            <p>画线、观察错误，再用三小步弄懂 π 的统计范围、六类圆弧和“各一条”。</p>
             <div className="tutorial-callout-meta">
-              <span>{tutorialProgress.completed ? "✓ 已完成" : `进度 ${tutorialProgress.step + 1} / 6`}</span>
+              <span>{tutorialProgress.completed ? "✓ 已完成" : `进度 ${tutorialProgress.step + 1} / 8`}</span>
               <span>不计时</span><span>可随时退出</span>
             </div>
           </div>
