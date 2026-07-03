@@ -97,6 +97,9 @@ def _atomic_json(path: Path, data: Any) -> None:
         handle.write("\n")
         temporary = Path(handle.name)
     temporary.replace(path)
+    # NamedTemporaryFile is mode 0600 on Linux. GitHub Pages must be able to
+    # read every file after extracting the deployment artifact.
+    path.chmod(0o644)
 
 
 def export_web_bundle(puzzle_paths: Iterable[Path], destination: Path) -> list[dict[str, Any]]:
