@@ -1,11 +1,13 @@
 import { useEffect, useMemo, useState } from "react";
 import { loadPuzzleIndex } from "./api";
 import { PuzzlePlayer } from "./components/PuzzlePlayer";
+import { TutorialPage } from "./components/TutorialPage";
 import { UpdateBanner } from "./components/UpdateBanner";
 import { formatElapsed } from "./format";
 import { LocalReceiptIssuer } from "./receipt";
 import { loadCompleted, storageAvailable } from "./storage";
 import type { CompletedPuzzleV1, Difficulty, PuzzleIndexItem, PuzzleIndexV1 } from "./types";
+import { loadTutorialProgress } from "./tutorial";
 
 const difficultyOrder: Difficulty[] = ["beginner", "medium", "difficult", "expert"];
 const labels: Record<Difficulty, string> = {
@@ -21,6 +23,8 @@ export default function App() {
   const [error, setError] = useState("");
   const [selectedDifficulty, setSelectedDifficulty] = useState<Difficulty | "all">("all");
   const [active, setActive] = useState<PuzzleIndexItem | null>(null);
+  const [tutorialActive, setTutorialActive] = useState(false);
+  const [tutorialProgress, setTutorialProgress] = useState(loadTutorialProgress);
   const [completed, setCompleted] = useState<Record<string, CompletedPuzzleV1>>(() => loadCompleted());
   const [canStore] = useState(storageAvailable);
   const isEmbedded = /MicroMessenger|QQ\//i.test(navigator.userAgent);
@@ -30,10 +34,15 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    if (!index) return;
     const syncFromUrl = () => {
+      if (window.location.hash === "#tutorial") {
+        setTutorialActive(true);
+        setActive(null);
+        return;
+      }
+      setTutorialActive(false);
       const match = window.location.hash.match(/^#play\/(TSH-\d{2})$/);
-      setActive(match ? index.puzzles.find((item) => item.id === match[1]) ?? null : null);
+      setActive(match && index ? index.puzzles.find((item) => item.id === match[1]) ?? null : null);
     };
     syncFromUrl();
     window.addEventListener("hashchange", syncFromUrl);
@@ -42,12 +51,20 @@ export default function App() {
 
   const openPuzzle = (item: PuzzleIndexItem) => {
     window.location.hash = `play/${item.id}`;
+    setTutorialActive(false);
     setActive(item);
+  };
+
+  const openTutorial = () => {
+    window.location.hash = "tutorial";
+    setActive(null);
+    setTutorialActive(true);
   };
 
   const closePuzzle = () => {
     history.replaceState(null, "", `${window.location.pathname}${window.location.search}`);
     setActive(null);
+    setTutorialActive(false);
   };
 
   const visible = useMemo(
@@ -60,6 +77,19 @@ export default function App() {
       <>
         <UpdateBanner />
         <PuzzlePlayer item={active} issuer={issuer} onBack={closePuzzle} onCompletion={() => setCompleted(loadCompleted())} />
+      </>
+    );
+  }
+
+  if (tutorialActive) {
+    return (
+      <>
+        <UpdateBanner />
+        <TutorialPage
+          onBack={closePuzzle}
+          onComplete={() => setTutorialProgress(loadTutorialProgress())}
+          onStartFirstPuzzle={index?.puzzles[0] ? () => openPuzzle(index.puzzles[0]) : undefined}
+        />
       </>
     );
   }
@@ -84,6 +114,21 @@ export default function App() {
       </header>
 
       <main className="home-content">
+        <section className="tutorial-callout">
+          <div className="tutorial-callout-art" aria-hidden="true">
+            <span className="orbit-arc arc-a" /><span className="orbit-arc arc-b" /><b>π</b>
+          </div>
+          <div className="tutorial-callout-copy">
+            <p className="eyebrow">第一次玩特色数回？</p>
+            <h2>{tutorialProgress.completed ? "随时重温互动教程" : "亲手操作，几分钟学会规则"}</h2>
+            <p>画一条弧、故意制造分叉、点亮 π 六方向，最后完成一题小练习。</p>
+            <div className="tutorial-callout-meta">
+              <span>{tutorialProgress.completed ? "✓ 已完成" : `进度 ${tutorialProgress.step + 1} / 6`}</span>
+              <span>不计时</span><span>可随时退出</span>
+            </div>
+          </div>
+          <button type="button" onClick={openTutorial}>{tutorialProgress.completed ? "重新学习" : tutorialProgress.step > 0 ? "继续教程" : "开始互动教程"}<span>→</span></button>
+        </section>
         <section className="rules-card">
           <div>
             <span>1</span><p>沿候选圆弧画出一条非空的单一闭环，不能交叉、分叉或形成多个小环。</p>
