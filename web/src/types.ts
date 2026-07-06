@@ -6,11 +6,17 @@ export interface PuzzleIndexItem {
   difficultyLabel: string;
   sourceHash: string;
   file: string;
+  publishedAt: string;
+  updatedAt: string;
+  revision: number;
+  clueCount: number;
+  cellCount: number;
 }
 
 export interface PuzzleIndexV1 {
   schemaVersion: 1;
   dataVersion: string;
+  catalogVersion: string;
   puzzles: PuzzleIndexItem[];
 }
 
@@ -52,6 +58,9 @@ export interface PlayablePuzzleV1 {
   id: string;
   difficulty: Difficulty;
   difficultyLabel: string;
+  publishedAt?: string;
+  updatedAt?: string;
+  revision?: number;
   clues: ClueV1[];
   topology: {
     bounds: { minX: number; maxX: number; minY: number; maxY: number };

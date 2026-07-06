@@ -9,7 +9,13 @@ const source = JSON.parse(
 async function startFirstPuzzle(page: import("@playwright/test").Page) {
   await page.goto("./");
   await expect(page.getByRole("heading", { name: "πDay - 特色数回" })).toBeVisible();
-  await page.getByRole("button", { name: /TSH-01/ }).click();
+  await page.getByRole("button", { name: /TSH-2026-01/ }).click();
+  const preview = page.getByRole("dialog", { name: /TSH-2026-01 关卡预览/ });
+  await expect(preview).toBeVisible();
+  await expect(preview).toContainText("2026年7月6日");
+  await expect(preview).toContainText("修订版 v1");
+  await expect(preview).toContainText("尚未通关");
+  await page.getByRole("button", { name: /进入关卡/ }).click();
   await page.getByRole("button", { name: "开始挑战" }).click();
   await expect(page.getByRole("application")).toBeVisible();
 }
@@ -35,7 +41,7 @@ test("accepts the official answer and generates a completion receipt", async ({ 
   await page.getByRole("button", { name: "提交验证" }).click();
   const dialog = page.getByRole("dialog", { name: "完成凭证" });
   await expect(dialog).toBeVisible();
-  await expect(dialog).toContainText("TSH-01");
+  await expect(dialog).toContainText("TSH-2026-01");
   await expect(dialog).toContainText("初级 Beginner");
   await expect(dialog).toContainText("本地验证通过");
 });
@@ -48,15 +54,17 @@ test("opens every cached level while offline after the first visit", async ({ pa
   await expect(page.getByRole("heading", { name: "πDay - 特色数回" })).toBeVisible();
   await context.setOffline(true);
   await page.reload();
-  await expect(page.getByRole("button", { name: /TSH-20/ })).toBeVisible();
-  await page.getByRole("button", { name: /TSH-20/ }).click();
+  await expect(page.getByRole("button", { name: /TSH-2026-20/ })).toBeVisible();
+  await page.getByRole("button", { name: /TSH-2026-20/ }).click();
+  await page.getByRole("button", { name: /进入关卡/ }).click();
   await expect(page.getByRole("button", { name: "开始挑战" })).toBeVisible();
 });
 
 test("supports touch pinch zoom on an expert board", async ({ page, context }, testInfo) => {
   test.skip(testInfo.project.name !== "mobile-chromium");
   await page.goto("./");
-  await page.getByRole("button", { name: /TSH-20/ }).click();
+  await page.getByRole("button", { name: /TSH-2026-20/ }).click();
+  await page.getByRole("button", { name: /进入关卡/ }).click();
   await page.getByRole("button", { name: "开始挑战" }).click();
   const board = page.getByRole("application");
   const before = await board.getAttribute("viewBox");

@@ -1,25 +1,17 @@
 {
   "schemaVersion": 1,
   "dataVersion": "piday-2026-v1",
-  "sourceHash": "18bb5f47d0574c4059f50f1e6ce6abbaea48ccf8150d227b4a49988bbbef2d05",
-  "id": "TSH-03",
-  "difficulty": "beginner",
-  "difficultyLabel": "初级 Beginner",
+  "sourceHash": "87543e7740339b51c31f1e15ec05a9ce7b1162f8fbc488d1d21045fbc0298cd1",
+  "id": "TSH-2026-09",
+  "difficulty": "medium",
+  "difficultyLabel": "中级 Medium",
+  "publishedAt": "2026-07-06",
+  "updatedAt": "2026-07-06",
+  "revision": 1,
   "clues": [
     {
       "cellId": "circle:0:0",
-      "kind": "number",
-      "value": 1
-    },
-    {
-      "cellId": "circle:0:1",
-      "kind": "number",
-      "value": 4
-    },
-    {
-      "cellId": "circle:0:2",
-      "kind": "number",
-      "value": 1
+      "kind": "pi"
     },
     {
       "cellId": "circle:0:3",
@@ -27,87 +19,29 @@
       "value": 0
     },
     {
-      "cellId": "circle:1:0",
-      "kind": "number",
-      "value": 5
-    },
-    {
       "cellId": "circle:1:1",
       "kind": "number",
-      "value": 4
+      "value": 3
     },
     {
       "cellId": "circle:1:2",
       "kind": "number",
-      "value": 1
-    },
-    {
-      "cellId": "circle:1:3",
-      "kind": "number",
-      "value": 0
-    },
-    {
-      "cellId": "circle:1:4",
-      "kind": "number",
-      "value": 0
+      "value": 2
     },
     {
       "cellId": "circle:2:0",
-      "kind": "number",
-      "value": 1
+      "kind": "pi"
     },
     {
       "cellId": "circle:2:1",
-      "kind": "number",
-      "value": 0
+      "kind": "pi"
     },
     {
       "cellId": "circle:2:2",
-      "kind": "number",
-      "value": 0
-    },
-    {
-      "cellId": "circle:2:3",
-      "kind": "number",
-      "value": 0
-    },
-    {
-      "cellId": "circle:3:0",
-      "kind": "number",
-      "value": 0
-    },
-    {
-      "cellId": "circle:3:1",
-      "kind": "number",
-      "value": 0
-    },
-    {
-      "cellId": "circle:3:2",
-      "kind": "number",
-      "value": 0
-    },
-    {
-      "cellId": "circle:3:3",
-      "kind": "number",
-      "value": 0
-    },
-    {
-      "cellId": "circle:3:4",
-      "kind": "number",
-      "value": 0
-    },
-    {
-      "cellId": "circle:4:0",
-      "kind": "number",
-      "value": 0
+      "kind": "pi"
     },
     {
       "cellId": "circle:4:1",
-      "kind": "number",
-      "value": 0
-    },
-    {
-      "cellId": "circle:4:2",
       "kind": "number",
       "value": 0
     },
@@ -118,73 +52,26 @@
     },
     {
       "cellId": "tri:circle:0:0+circle:0:1+circle:1:1",
-      "kind": "number",
-      "value": 1
-    },
-    {
-      "cellId": "tri:circle:0:0+circle:1:0+circle:1:1",
-      "kind": "number",
-      "value": 2
-    },
-    {
-      "cellId": "tri:circle:0:1+circle:0:2+circle:1:2",
-      "kind": "number",
-      "value": 2
+      "kind": "pi"
     },
     {
       "cellId": "tri:circle:0:1+circle:1:1+circle:1:2",
-      "kind": "number",
-      "value": 2
+      "kind": "pi"
     },
     {
       "cellId": "tri:circle:0:2+circle:0:3+circle:1:3",
       "kind": "number",
-      "value": 0
-    },
-    {
-      "cellId": "tri:circle:0:2+circle:1:2+circle:1:3",
-      "kind": "number",
-      "value": 0
+      "value": 1
     },
     {
       "cellId": "tri:circle:0:3+circle:1:3+circle:1:4",
       "kind": "number",
-      "value": 0
-    },
-    {
-      "cellId": "tri:circle:1:0+circle:1:1+circle:2:0",
-      "kind": "number",
-      "value": 1
-    },
-    {
-      "cellId": "tri:circle:1:1+circle:1:2+circle:2:1",
-      "kind": "number",
-      "value": 1
-    },
-    {
-      "cellId": "tri:circle:1:1+circle:2:0+circle:2:1",
-      "kind": "number",
-      "value": 1
+      "value": 2
     },
     {
       "cellId": "tri:circle:1:2+circle:1:3+circle:2:2",
       "kind": "number",
-      "value": 0
-    },
-    {
-      "cellId": "tri:circle:1:2+circle:2:1+circle:2:2",
-      "kind": "number",
-      "value": 0
-    },
-    {
-      "cellId": "tri:circle:1:3+circle:1:4+circle:2:3",
-      "kind": "number",
-      "value": 0
-    },
-    {
-      "cellId": "tri:circle:1:3+circle:2:2+circle:2:3",
-      "kind": "number",
-      "value": 0
+      "value": 1
     },
     {
       "cellId": "tri:circle:2:0+circle:2:1+circle:3:1",
@@ -192,39 +79,9 @@
       "value": 0
     },
     {
-      "cellId": "tri:circle:2:0+circle:3:0+circle:3:1",
-      "kind": "number",
-      "value": 0
-    },
-    {
-      "cellId": "tri:circle:2:1+circle:2:2+circle:3:2",
-      "kind": "number",
-      "value": 0
-    },
-    {
-      "cellId": "tri:circle:2:1+circle:3:1+circle:3:2",
-      "kind": "number",
-      "value": 0
-    },
-    {
       "cellId": "tri:circle:2:2+circle:2:3+circle:3:3",
       "kind": "number",
-      "value": 0
-    },
-    {
-      "cellId": "tri:circle:2:2+circle:3:2+circle:3:3",
-      "kind": "number",
-      "value": 0
-    },
-    {
-      "cellId": "tri:circle:2:3+circle:3:3+circle:3:4",
-      "kind": "number",
-      "value": 0
-    },
-    {
-      "cellId": "tri:circle:3:0+circle:3:1+circle:4:0",
-      "kind": "number",
-      "value": 0
+      "value": 1
     },
     {
       "cellId": "tri:circle:3:1+circle:3:2+circle:4:1",
@@ -232,29 +89,9 @@
       "value": 0
     },
     {
-      "cellId": "tri:circle:3:1+circle:4:0+circle:4:1",
-      "kind": "number",
-      "value": 0
-    },
-    {
-      "cellId": "tri:circle:3:2+circle:3:3+circle:4:2",
-      "kind": "number",
-      "value": 0
-    },
-    {
-      "cellId": "tri:circle:3:2+circle:4:1+circle:4:2",
-      "kind": "number",
-      "value": 0
-    },
-    {
       "cellId": "tri:circle:3:3+circle:3:4+circle:4:3",
       "kind": "number",
-      "value": 0
-    },
-    {
-      "cellId": "tri:circle:3:3+circle:4:2+circle:4:3",
-      "kind": "number",
-      "value": 0
+      "value": 1
     }
   ],
   "topology": {

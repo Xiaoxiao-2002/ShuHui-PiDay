@@ -1,47 +1,73 @@
 {
   "schemaVersion": 1,
   "dataVersion": "piday-2026-v1",
-  "sourceHash": "c00f232c889180817669d2308caecaad01a02a4635265bc0ad2b9094414c9c58",
-  "id": "TSH-15",
+  "sourceHash": "3eb2a9607f2c318a5ee676cc60fed633720b4222bd942a6743bfbcb030a6e5a6",
+  "id": "TSH-2026-14",
   "difficulty": "difficult",
   "difficultyLabel": "高级 Difficult",
+  "publishedAt": "2026-07-06",
+  "updatedAt": "2026-07-06",
+  "revision": 1,
   "clues": [
+    {
+      "cellId": "circle:0:1",
+      "kind": "pi"
+    },
+    {
+      "cellId": "circle:0:4",
+      "kind": "pi"
+    },
+    {
+      "cellId": "circle:0:7",
+      "kind": "number",
+      "value": 5
+    },
+    {
+      "cellId": "circle:0:8",
+      "kind": "number",
+      "value": 1
+    },
+    {
+      "cellId": "circle:1:1",
+      "kind": "pi"
+    },
+    {
+      "cellId": "circle:1:3",
+      "kind": "number",
+      "value": 5
+    },
+    {
+      "cellId": "circle:1:4",
+      "kind": "number",
+      "value": 1
+    },
     {
       "cellId": "circle:1:6",
       "kind": "pi"
     },
     {
-      "cellId": "circle:2:0",
-      "kind": "number",
-      "value": 0
-    },
-    {
-      "cellId": "circle:2:1",
-      "kind": "number",
-      "value": 0
-    },
-    {
-      "cellId": "circle:2:4",
-      "kind": "number",
-      "value": 3
-    },
-    {
-      "cellId": "circle:2:5",
+      "cellId": "circle:2:2",
       "kind": "pi"
     },
     {
-      "cellId": "circle:2:6",
+      "cellId": "circle:2:7",
       "kind": "number",
-      "value": 2
+      "value": 0
     },
     {
-      "cellId": "circle:3:3",
+      "cellId": "circle:3:0",
       "kind": "number",
       "value": 0
     },
     {
       "cellId": "circle:3:4",
-      "kind": "pi"
+      "kind": "number",
+      "value": 2
+    },
+    {
+      "cellId": "circle:3:5",
+      "kind": "number",
+      "value": 2
     },
     {
       "cellId": "circle:3:6",
@@ -49,15 +75,7 @@
       "value": 2
     },
     {
-      "cellId": "circle:4:1",
-      "kind": "pi"
-    },
-    {
-      "cellId": "circle:4:2",
-      "kind": "pi"
-    },
-    {
-      "cellId": "circle:4:3",
+      "cellId": "circle:4:5",
       "kind": "number",
       "value": 0
     },
@@ -67,171 +85,201 @@
       "value": 1
     },
     {
+      "cellId": "circle:5:0",
+      "kind": "number",
+      "value": 0
+    },
+    {
+      "cellId": "circle:5:1",
+      "kind": "number",
+      "value": 0
+    },
+    {
       "cellId": "circle:5:3",
-      "kind": "pi"
+      "kind": "number",
+      "value": 3
     },
     {
       "cellId": "circle:5:4",
       "kind": "number",
-      "value": 1
-    },
-    {
-      "cellId": "circle:5:7",
-      "kind": "number",
-      "value": 3
+      "value": 2
     },
     {
       "cellId": "circle:5:8",
       "kind": "number",
-      "value": 1
+      "value": 0
     },
     {
-      "cellId": "circle:6:4",
+      "cellId": "circle:5:9",
       "kind": "number",
-      "value": 3
+      "value": 0
     },
     {
-      "cellId": "circle:6:5",
+      "cellId": "circle:6:1",
+      "kind": "number",
+      "value": 0
+    },
+    {
+      "cellId": "circle:6:2",
       "kind": "number",
       "value": 2
     },
     {
-      "cellId": "circle:6:7",
-      "kind": "number",
-      "value": 4
+      "cellId": "circle:6:3",
+      "kind": "pi"
     },
     {
       "cellId": "circle:7:5",
       "kind": "number",
-      "value": 1
+      "value": 0
     },
     {
-      "cellId": "circle:7:7",
+      "cellId": "circle:8:6",
       "kind": "number",
       "value": 0
     },
     {
-      "cellId": "circle:8:5",
-      "kind": "number",
-      "value": 0
-    },
-    {
-      "cellId": "circle:9:6",
-      "kind": "number",
-      "value": 0
-    },
-    {
-      "cellId": "tri:circle:0:3+circle:0:4+circle:1:4",
-      "kind": "number",
-      "value": 0
-    },
-    {
-      "cellId": "tri:circle:0:4+circle:0:5+circle:1:5",
-      "kind": "number",
-      "value": 0
-    },
-    {
-      "cellId": "tri:circle:0:6+circle:1:6+circle:1:7",
-      "kind": "number",
-      "value": 0
-    },
-    {
-      "cellId": "tri:circle:1:3+circle:2:2+circle:2:3",
-      "kind": "number",
-      "value": 0
-    },
-    {
-      "cellId": "tri:circle:1:4+circle:2:3+circle:2:4",
-      "kind": "number",
-      "value": 0
-    },
-    {
-      "cellId": "tri:circle:1:5+circle:1:6+circle:2:5",
+      "cellId": "tri:circle:0:1+circle:0:2+circle:1:2",
       "kind": "number",
       "value": 2
     },
     {
-      "cellId": "tri:circle:1:6+circle:2:5+circle:2:6",
+      "cellId": "tri:circle:0:1+circle:1:1+circle:1:2",
+      "kind": "number",
+      "value": 2
+    },
+    {
+      "cellId": "tri:circle:0:4+circle:1:4+circle:1:5",
+      "kind": "number",
+      "value": 1
+    },
+    {
+      "cellId": "tri:circle:0:8+circle:1:8+circle:1:9",
+      "kind": "number",
+      "value": 1
+    },
+    {
+      "cellId": "tri:circle:1:0+circle:1:1+circle:2:0",
+      "kind": "number",
+      "value": 0
+    },
+    {
+      "cellId": "tri:circle:1:2+circle:1:3+circle:2:2",
+      "kind": "number",
+      "value": 2
+    },
+    {
+      "cellId": "tri:circle:1:5+circle:2:4+circle:2:5",
+      "kind": "number",
+      "value": 1
+    },
+    {
+      "cellId": "tri:circle:1:6+circle:1:7+circle:2:6",
       "kind": "number",
       "value": 1
     },
     {
       "cellId": "tri:circle:1:7+circle:1:8+circle:2:7",
       "kind": "number",
-      "value": 0
+      "value": 2
     },
     {
-      "cellId": "tri:circle:2:0+circle:2:1+circle:3:1",
+      "cellId": "tri:circle:1:8+circle:1:9+circle:2:8",
+      "kind": "number",
+      "value": 2
+    },
+    {
+      "cellId": "tri:circle:2:3+circle:2:4+circle:3:4",
       "kind": "number",
       "value": 0
     },
     {
-      "cellId": "tri:circle:2:7+circle:3:7+circle:3:8",
+      "cellId": "tri:circle:2:3+circle:3:3+circle:3:4",
       "kind": "number",
-      "value": 0
+      "value": 2
     },
     {
-      "cellId": "tri:circle:3:1+circle:3:2+circle:4:1",
+      "cellId": "tri:circle:2:4+circle:3:4+circle:3:5",
       "kind": "number",
       "value": 1
     },
     {
-      "cellId": "tri:circle:3:4+circle:4:3+circle:4:4",
+      "cellId": "tri:circle:2:6+circle:3:6+circle:3:7",
       "kind": "number",
       "value": 0
     },
     {
-      "cellId": "tri:circle:3:5+circle:4:4+circle:4:5",
-      "kind": "number",
-      "value": 2
-    },
-    {
-      "cellId": "tri:circle:3:6+circle:4:5+circle:4:6",
-      "kind": "number",
-      "value": 2
-    },
-    {
-      "cellId": "tri:circle:4:1+circle:5:1+circle:5:2",
+      "cellId": "tri:circle:3:0+circle:3:1+circle:4:0",
       "kind": "number",
       "value": 0
     },
     {
-      "cellId": "tri:circle:4:5+circle:5:5+circle:5:6",
+      "cellId": "tri:circle:3:1+circle:4:0+circle:4:1",
       "kind": "number",
-      "value": 2
+      "value": 0
     },
     {
-      "cellId": "tri:circle:4:6+circle:4:7+circle:5:7",
+      "cellId": "tri:circle:3:2+circle:4:1+circle:4:2",
+      "kind": "number",
+      "value": 0
+    },
+    {
+      "cellId": "tri:circle:3:3+circle:4:2+circle:4:3",
       "kind": "number",
       "value": 1
     },
     {
-      "cellId": "tri:circle:4:6+circle:5:6+circle:5:7",
+      "cellId": "tri:circle:3:6+circle:3:7+circle:4:6",
       "kind": "number",
-      "value": 2
+      "value": 1
     },
     {
-      "cellId": "tri:circle:5:2+circle:5:3+circle:6:2",
+      "cellId": "tri:circle:3:7+circle:4:6+circle:4:7",
       "kind": "number",
-      "value": 2
+      "value": 1
     },
     {
-      "cellId": "tri:circle:5:5+circle:6:4+circle:6:5",
-      "kind": "number",
-      "value": 2
-    },
-    {
-      "cellId": "tri:circle:6:3+circle:6:4+circle:7:4",
+      "cellId": "tri:circle:3:8+circle:4:7+circle:4:8",
       "kind": "number",
       "value": 0
     },
     {
-      "cellId": "tri:circle:6:5+circle:6:6+circle:7:6",
+      "cellId": "tri:circle:4:2+circle:5:2+circle:5:3",
+      "kind": "number",
+      "value": 1
+    },
+    {
+      "cellId": "tri:circle:4:3+circle:4:4+circle:5:4",
+      "kind": "number",
+      "value": 2
+    },
+    {
+      "cellId": "tri:circle:4:4+circle:5:4+circle:5:5",
       "kind": "number",
       "value": 0
     },
     {
-      "cellId": "tri:circle:7:4+circle:7:5+circle:8:4",
+      "cellId": "tri:circle:6:2+circle:6:3+circle:7:3",
+      "kind": "number",
+      "value": 0
+    },
+    {
+      "cellId": "tri:circle:6:2+circle:7:2+circle:7:3",
+      "kind": "number",
+      "value": 0
+    },
+    {
+      "cellId": "tri:circle:7:1+circle:8:0+circle:8:1",
+      "kind": "number",
+      "value": 0
+    },
+    {
+      "cellId": "tri:circle:7:8+circle:7:9+circle:8:8",
+      "kind": "number",
+      "value": 0
+    },
+    {
+      "cellId": "tri:circle:8:6+circle:8:7+circle:9:7",
       "kind": "number",
       "value": 0
     }
@@ -239,7 +287,7 @@
   "topology": {
     "bounds": {
       "minX": -0.5,
-      "maxX": 8.5,
+      "maxX": 9.5,
       "minY": -0.4330127018922193,
       "maxY": 8.227241335952167
     },
@@ -1625,6 +1673,11 @@
         "y": 6.928203230275509
       },
       {
+        "id": "p:8250000:-433013",
+        "x": 8.25,
+        "y": -0.43301270189221924
+      },
+      {
         "id": "p:8250000:1299038",
         "x": 8.25,
         "y": 1.299038105676658
@@ -1632,7 +1685,7 @@
       {
         "id": "p:8250000:2165064",
         "x": 8.25,
-        "y": 2.165063509461097
+        "y": 2.1650635094610964
       },
       {
         "id": "p:8250000:3031089",
@@ -1647,7 +1700,7 @@
       {
         "id": "p:8250000:433013",
         "x": 8.25,
-        "y": 0.4330127018922193
+        "y": 0.43301270189221935
       },
       {
         "id": "p:8250000:4763140",
@@ -1657,7 +1710,7 @@
       {
         "id": "p:8250000:5629165",
         "x": 8.25,
-        "y": 5.629165124598851
+        "y": 5.629165124598852
       },
       {
         "id": "p:8250000:6495191",
@@ -1667,7 +1720,7 @@
       {
         "id": "p:8250000:7361216",
         "x": 8.25,
-        "y": 7.3612159321677275
+        "y": 7.361215932167728
       },
       {
         "id": "p:8250000:8227241",
@@ -1697,6 +1750,161 @@
       {
         "id": "p:8500000:866025",
         "x": 8.5,
+        "y": 0.8660254037844386
+      },
+      {
+        "id": "p:8750000:-433013",
+        "x": 8.75,
+        "y": -0.4330127018922193
+      },
+      {
+        "id": "p:8750000:1299038",
+        "x": 8.75,
+        "y": 1.299038105676658
+      },
+      {
+        "id": "p:8750000:2165064",
+        "x": 8.75,
+        "y": 2.1650635094610964
+      },
+      {
+        "id": "p:8750000:3031089",
+        "x": 8.75,
+        "y": 3.031088913245535
+      },
+      {
+        "id": "p:8750000:3897114",
+        "x": 8.75,
+        "y": 3.8971143170299736
+      },
+      {
+        "id": "p:8750000:433013",
+        "x": 8.75,
+        "y": 0.4330127018922193
+      },
+      {
+        "id": "p:8750000:4763140",
+        "x": 8.75,
+        "y": 4.763139720814412
+      },
+      {
+        "id": "p:8750000:5629165",
+        "x": 8.75,
+        "y": 5.629165124598852
+      },
+      {
+        "id": "p:8750000:6495191",
+        "x": 8.75,
+        "y": 6.49519052838329
+      },
+      {
+        "id": "p:8750000:7361216",
+        "x": 8.75,
+        "y": 7.361215932167728
+      },
+      {
+        "id": "p:8750000:8227241",
+        "x": 8.75,
+        "y": 8.227241335952167
+      },
+      {
+        "id": "p:9000000:0",
+        "x": 9.0,
+        "y": 0.0
+      },
+      {
+        "id": "p:9000000:1732051",
+        "x": 9.0,
+        "y": 1.7320508075688772
+      },
+      {
+        "id": "p:9000000:3464102",
+        "x": 9.0,
+        "y": 3.4641016151377544
+      },
+      {
+        "id": "p:9000000:5196152",
+        "x": 9.0,
+        "y": 5.196152422706632
+      },
+      {
+        "id": "p:9000000:6928203",
+        "x": 9.0,
+        "y": 6.928203230275509
+      },
+      {
+        "id": "p:9250000:1299038",
+        "x": 9.25,
+        "y": 1.299038105676658
+      },
+      {
+        "id": "p:9250000:2165064",
+        "x": 9.25,
+        "y": 2.165063509461097
+      },
+      {
+        "id": "p:9250000:3031089",
+        "x": 9.25,
+        "y": 3.031088913245535
+      },
+      {
+        "id": "p:9250000:3897114",
+        "x": 9.25,
+        "y": 3.8971143170299736
+      },
+      {
+        "id": "p:9250000:433013",
+        "x": 9.25,
+        "y": 0.4330127018922193
+      },
+      {
+        "id": "p:9250000:4763140",
+        "x": 9.25,
+        "y": 4.763139720814412
+      },
+      {
+        "id": "p:9250000:5629165",
+        "x": 9.25,
+        "y": 5.629165124598851
+      },
+      {
+        "id": "p:9250000:6495191",
+        "x": 9.25,
+        "y": 6.49519052838329
+      },
+      {
+        "id": "p:9250000:7361216",
+        "x": 9.25,
+        "y": 7.3612159321677275
+      },
+      {
+        "id": "p:9250000:8227241",
+        "x": 9.25,
+        "y": 8.227241335952167
+      },
+      {
+        "id": "p:9500000:2598076",
+        "x": 9.5,
+        "y": 2.598076211353316
+      },
+      {
+        "id": "p:9500000:4330127",
+        "x": 9.5,
+        "y": 4.330127018922193
+      },
+      {
+        "id": "p:9500000:6062178",
+        "x": 9.5,
+        "y": 6.06217782649107
+      },
+      {
+        "id": "p:9500000:7794229",
+        "x": 9.5,
+        "y": 7.794228634059947
+      },
+      {
+        "id": "p:9500000:866025",
+        "x": 9.5,
         "y": 0.8660254037844386
       }
     ],
@@ -2510,6 +2718,108 @@
         "circle": {
           "center": [
             7.5,
+            0.0
+          ],
+          "radius": 0.5,
+          "startAngle": 300.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:0:8:0",
+        "vertices": [
+          "p:9000000:0",
+          "p:8750000:433013"
+        ],
+        "sector": 0,
+        "circle": {
+          "center": [
+            8.5,
+            0.0
+          ],
+          "radius": 0.5,
+          "startAngle": 0.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:0:8:1",
+        "vertices": [
+          "p:8750000:433013",
+          "p:8250000:433013"
+        ],
+        "sector": 1,
+        "circle": {
+          "center": [
+            8.5,
+            0.0
+          ],
+          "radius": 0.5,
+          "startAngle": 60.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:0:8:2",
+        "vertices": [
+          "p:8250000:433013",
+          "p:8000000:0"
+        ],
+        "sector": 2,
+        "circle": {
+          "center": [
+            8.5,
+            0.0
+          ],
+          "radius": 0.5,
+          "startAngle": 120.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:0:8:3",
+        "vertices": [
+          "p:8000000:0",
+          "p:8250000:-433013"
+        ],
+        "sector": 3,
+        "circle": {
+          "center": [
+            8.5,
+            0.0
+          ],
+          "radius": 0.5,
+          "startAngle": 180.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:0:8:4",
+        "vertices": [
+          "p:8250000:-433013",
+          "p:8750000:-433013"
+        ],
+        "sector": 4,
+        "circle": {
+          "center": [
+            8.5,
+            0.0
+          ],
+          "radius": 0.5,
+          "startAngle": 240.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:0:8:5",
+        "vertices": [
+          "p:8750000:-433013",
+          "p:9000000:0"
+        ],
+        "sector": 5,
+        "circle": {
+          "center": [
+            8.5,
             0.0
           ],
           "radius": 0.5,
@@ -3436,6 +3746,108 @@
         }
       },
       {
+        "id": "arc:1:9:0",
+        "vertices": [
+          "p:9500000:866025",
+          "p:9250000:1299038"
+        ],
+        "sector": 0,
+        "circle": {
+          "center": [
+            9.0,
+            0.8660254037844386
+          ],
+          "radius": 0.5,
+          "startAngle": 0.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:1:9:1",
+        "vertices": [
+          "p:9250000:1299038",
+          "p:8750000:1299038"
+        ],
+        "sector": 1,
+        "circle": {
+          "center": [
+            9.0,
+            0.8660254037844386
+          ],
+          "radius": 0.5,
+          "startAngle": 60.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:1:9:2",
+        "vertices": [
+          "p:8750000:1299038",
+          "p:8500000:866025"
+        ],
+        "sector": 2,
+        "circle": {
+          "center": [
+            9.0,
+            0.8660254037844386
+          ],
+          "radius": 0.5,
+          "startAngle": 120.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:1:9:3",
+        "vertices": [
+          "p:8500000:866025",
+          "p:8750000:433013"
+        ],
+        "sector": 3,
+        "circle": {
+          "center": [
+            9.0,
+            0.8660254037844386
+          ],
+          "radius": 0.5,
+          "startAngle": 180.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:1:9:4",
+        "vertices": [
+          "p:8750000:433013",
+          "p:9250000:433013"
+        ],
+        "sector": 4,
+        "circle": {
+          "center": [
+            9.0,
+            0.8660254037844386
+          ],
+          "radius": 0.5,
+          "startAngle": 240.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:1:9:5",
+        "vertices": [
+          "p:9250000:433013",
+          "p:9500000:866025"
+        ],
+        "sector": 5,
+        "circle": {
+          "center": [
+            9.0,
+            0.8660254037844386
+          ],
+          "radius": 0.5,
+          "startAngle": 300.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
         "id": "arc:2:0:0",
         "vertices": [
           "p:1000000:1732051",
@@ -4244,6 +4656,108 @@
         "circle": {
           "center": [
             7.5,
+            1.7320508075688772
+          ],
+          "radius": 0.5,
+          "startAngle": 300.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:2:8:0",
+        "vertices": [
+          "p:9000000:1732051",
+          "p:8750000:2165064"
+        ],
+        "sector": 0,
+        "circle": {
+          "center": [
+            8.5,
+            1.7320508075688772
+          ],
+          "radius": 0.5,
+          "startAngle": 0.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:2:8:1",
+        "vertices": [
+          "p:8750000:2165064",
+          "p:8250000:2165064"
+        ],
+        "sector": 1,
+        "circle": {
+          "center": [
+            8.5,
+            1.7320508075688772
+          ],
+          "radius": 0.5,
+          "startAngle": 60.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:2:8:2",
+        "vertices": [
+          "p:8250000:2165064",
+          "p:8000000:1732051"
+        ],
+        "sector": 2,
+        "circle": {
+          "center": [
+            8.5,
+            1.7320508075688772
+          ],
+          "radius": 0.5,
+          "startAngle": 120.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:2:8:3",
+        "vertices": [
+          "p:8000000:1732051",
+          "p:8250000:1299038"
+        ],
+        "sector": 3,
+        "circle": {
+          "center": [
+            8.5,
+            1.7320508075688772
+          ],
+          "radius": 0.5,
+          "startAngle": 180.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:2:8:4",
+        "vertices": [
+          "p:8250000:1299038",
+          "p:8750000:1299038"
+        ],
+        "sector": 4,
+        "circle": {
+          "center": [
+            8.5,
+            1.7320508075688772
+          ],
+          "radius": 0.5,
+          "startAngle": 240.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:2:8:5",
+        "vertices": [
+          "p:8750000:1299038",
+          "p:9000000:1732051"
+        ],
+        "sector": 5,
+        "circle": {
+          "center": [
+            8.5,
             1.7320508075688772
           ],
           "radius": 0.5,
@@ -5170,6 +5684,108 @@
         }
       },
       {
+        "id": "arc:3:9:0",
+        "vertices": [
+          "p:9500000:2598076",
+          "p:9250000:3031089"
+        ],
+        "sector": 0,
+        "circle": {
+          "center": [
+            9.0,
+            2.598076211353316
+          ],
+          "radius": 0.5,
+          "startAngle": 0.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:3:9:1",
+        "vertices": [
+          "p:9250000:3031089",
+          "p:8750000:3031089"
+        ],
+        "sector": 1,
+        "circle": {
+          "center": [
+            9.0,
+            2.598076211353316
+          ],
+          "radius": 0.5,
+          "startAngle": 60.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:3:9:2",
+        "vertices": [
+          "p:8750000:3031089",
+          "p:8500000:2598076"
+        ],
+        "sector": 2,
+        "circle": {
+          "center": [
+            9.0,
+            2.598076211353316
+          ],
+          "radius": 0.5,
+          "startAngle": 120.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:3:9:3",
+        "vertices": [
+          "p:8500000:2598076",
+          "p:8750000:2165064"
+        ],
+        "sector": 3,
+        "circle": {
+          "center": [
+            9.0,
+            2.598076211353316
+          ],
+          "radius": 0.5,
+          "startAngle": 180.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:3:9:4",
+        "vertices": [
+          "p:8750000:2165064",
+          "p:9250000:2165064"
+        ],
+        "sector": 4,
+        "circle": {
+          "center": [
+            9.0,
+            2.598076211353316
+          ],
+          "radius": 0.5,
+          "startAngle": 240.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:3:9:5",
+        "vertices": [
+          "p:9250000:2165064",
+          "p:9500000:2598076"
+        ],
+        "sector": 5,
+        "circle": {
+          "center": [
+            9.0,
+            2.598076211353316
+          ],
+          "radius": 0.5,
+          "startAngle": 300.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
         "id": "arc:4:0:0",
         "vertices": [
           "p:1000000:3464102",
@@ -5978,6 +6594,108 @@
         "circle": {
           "center": [
             7.5,
+            3.4641016151377544
+          ],
+          "radius": 0.5,
+          "startAngle": 300.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:4:8:0",
+        "vertices": [
+          "p:9000000:3464102",
+          "p:8750000:3897114"
+        ],
+        "sector": 0,
+        "circle": {
+          "center": [
+            8.5,
+            3.4641016151377544
+          ],
+          "radius": 0.5,
+          "startAngle": 0.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:4:8:1",
+        "vertices": [
+          "p:8750000:3897114",
+          "p:8250000:3897114"
+        ],
+        "sector": 1,
+        "circle": {
+          "center": [
+            8.5,
+            3.4641016151377544
+          ],
+          "radius": 0.5,
+          "startAngle": 60.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:4:8:2",
+        "vertices": [
+          "p:8250000:3897114",
+          "p:8000000:3464102"
+        ],
+        "sector": 2,
+        "circle": {
+          "center": [
+            8.5,
+            3.4641016151377544
+          ],
+          "radius": 0.5,
+          "startAngle": 120.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:4:8:3",
+        "vertices": [
+          "p:8000000:3464102",
+          "p:8250000:3031089"
+        ],
+        "sector": 3,
+        "circle": {
+          "center": [
+            8.5,
+            3.4641016151377544
+          ],
+          "radius": 0.5,
+          "startAngle": 180.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:4:8:4",
+        "vertices": [
+          "p:8250000:3031089",
+          "p:8750000:3031089"
+        ],
+        "sector": 4,
+        "circle": {
+          "center": [
+            8.5,
+            3.4641016151377544
+          ],
+          "radius": 0.5,
+          "startAngle": 240.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:4:8:5",
+        "vertices": [
+          "p:8750000:3031089",
+          "p:9000000:3464102"
+        ],
+        "sector": 5,
+        "circle": {
+          "center": [
+            8.5,
             3.4641016151377544
           ],
           "radius": 0.5,
@@ -6904,6 +7622,108 @@
         }
       },
       {
+        "id": "arc:5:9:0",
+        "vertices": [
+          "p:9500000:4330127",
+          "p:9250000:4763140"
+        ],
+        "sector": 0,
+        "circle": {
+          "center": [
+            9.0,
+            4.330127018922193
+          ],
+          "radius": 0.5,
+          "startAngle": 0.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:5:9:1",
+        "vertices": [
+          "p:9250000:4763140",
+          "p:8750000:4763140"
+        ],
+        "sector": 1,
+        "circle": {
+          "center": [
+            9.0,
+            4.330127018922193
+          ],
+          "radius": 0.5,
+          "startAngle": 60.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:5:9:2",
+        "vertices": [
+          "p:8750000:4763140",
+          "p:8500000:4330127"
+        ],
+        "sector": 2,
+        "circle": {
+          "center": [
+            9.0,
+            4.330127018922193
+          ],
+          "radius": 0.5,
+          "startAngle": 120.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:5:9:3",
+        "vertices": [
+          "p:8500000:4330127",
+          "p:8750000:3897114"
+        ],
+        "sector": 3,
+        "circle": {
+          "center": [
+            9.0,
+            4.330127018922193
+          ],
+          "radius": 0.5,
+          "startAngle": 180.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:5:9:4",
+        "vertices": [
+          "p:8750000:3897114",
+          "p:9250000:3897114"
+        ],
+        "sector": 4,
+        "circle": {
+          "center": [
+            9.0,
+            4.330127018922193
+          ],
+          "radius": 0.5,
+          "startAngle": 240.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:5:9:5",
+        "vertices": [
+          "p:9250000:3897114",
+          "p:9500000:4330127"
+        ],
+        "sector": 5,
+        "circle": {
+          "center": [
+            9.0,
+            4.330127018922193
+          ],
+          "radius": 0.5,
+          "startAngle": 300.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
         "id": "arc:6:0:0",
         "vertices": [
           "p:1000000:5196152",
@@ -7712,6 +8532,108 @@
         "circle": {
           "center": [
             7.5,
+            5.196152422706632
+          ],
+          "radius": 0.5,
+          "startAngle": 300.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:6:8:0",
+        "vertices": [
+          "p:9000000:5196152",
+          "p:8750000:5629165"
+        ],
+        "sector": 0,
+        "circle": {
+          "center": [
+            8.5,
+            5.196152422706632
+          ],
+          "radius": 0.5,
+          "startAngle": 0.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:6:8:1",
+        "vertices": [
+          "p:8750000:5629165",
+          "p:8250000:5629165"
+        ],
+        "sector": 1,
+        "circle": {
+          "center": [
+            8.5,
+            5.196152422706632
+          ],
+          "radius": 0.5,
+          "startAngle": 60.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:6:8:2",
+        "vertices": [
+          "p:8250000:5629165",
+          "p:8000000:5196152"
+        ],
+        "sector": 2,
+        "circle": {
+          "center": [
+            8.5,
+            5.196152422706632
+          ],
+          "radius": 0.5,
+          "startAngle": 120.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:6:8:3",
+        "vertices": [
+          "p:8000000:5196152",
+          "p:8250000:4763140"
+        ],
+        "sector": 3,
+        "circle": {
+          "center": [
+            8.5,
+            5.196152422706632
+          ],
+          "radius": 0.5,
+          "startAngle": 180.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:6:8:4",
+        "vertices": [
+          "p:8250000:4763140",
+          "p:8750000:4763140"
+        ],
+        "sector": 4,
+        "circle": {
+          "center": [
+            8.5,
+            5.196152422706632
+          ],
+          "radius": 0.5,
+          "startAngle": 240.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:6:8:5",
+        "vertices": [
+          "p:8750000:4763140",
+          "p:9000000:5196152"
+        ],
+        "sector": 5,
+        "circle": {
+          "center": [
+            8.5,
             5.196152422706632
           ],
           "radius": 0.5,
@@ -8638,6 +9560,108 @@
         }
       },
       {
+        "id": "arc:7:9:0",
+        "vertices": [
+          "p:9500000:6062178",
+          "p:9250000:6495191"
+        ],
+        "sector": 0,
+        "circle": {
+          "center": [
+            9.0,
+            6.06217782649107
+          ],
+          "radius": 0.5,
+          "startAngle": 0.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:7:9:1",
+        "vertices": [
+          "p:9250000:6495191",
+          "p:8750000:6495191"
+        ],
+        "sector": 1,
+        "circle": {
+          "center": [
+            9.0,
+            6.06217782649107
+          ],
+          "radius": 0.5,
+          "startAngle": 60.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:7:9:2",
+        "vertices": [
+          "p:8750000:6495191",
+          "p:8500000:6062178"
+        ],
+        "sector": 2,
+        "circle": {
+          "center": [
+            9.0,
+            6.06217782649107
+          ],
+          "radius": 0.5,
+          "startAngle": 120.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:7:9:3",
+        "vertices": [
+          "p:8500000:6062178",
+          "p:8750000:5629165"
+        ],
+        "sector": 3,
+        "circle": {
+          "center": [
+            9.0,
+            6.06217782649107
+          ],
+          "radius": 0.5,
+          "startAngle": 180.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:7:9:4",
+        "vertices": [
+          "p:8750000:5629165",
+          "p:9250000:5629165"
+        ],
+        "sector": 4,
+        "circle": {
+          "center": [
+            9.0,
+            6.06217782649107
+          ],
+          "radius": 0.5,
+          "startAngle": 240.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:7:9:5",
+        "vertices": [
+          "p:9250000:5629165",
+          "p:9500000:6062178"
+        ],
+        "sector": 5,
+        "circle": {
+          "center": [
+            9.0,
+            6.06217782649107
+          ],
+          "radius": 0.5,
+          "startAngle": 300.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
         "id": "arc:8:0:0",
         "vertices": [
           "p:1000000:6928203",
@@ -9446,6 +10470,108 @@
         "circle": {
           "center": [
             7.5,
+            6.928203230275509
+          ],
+          "radius": 0.5,
+          "startAngle": 300.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:8:8:0",
+        "vertices": [
+          "p:9000000:6928203",
+          "p:8750000:7361216"
+        ],
+        "sector": 0,
+        "circle": {
+          "center": [
+            8.5,
+            6.928203230275509
+          ],
+          "radius": 0.5,
+          "startAngle": 0.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:8:8:1",
+        "vertices": [
+          "p:8750000:7361216",
+          "p:8250000:7361216"
+        ],
+        "sector": 1,
+        "circle": {
+          "center": [
+            8.5,
+            6.928203230275509
+          ],
+          "radius": 0.5,
+          "startAngle": 60.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:8:8:2",
+        "vertices": [
+          "p:8250000:7361216",
+          "p:8000000:6928203"
+        ],
+        "sector": 2,
+        "circle": {
+          "center": [
+            8.5,
+            6.928203230275509
+          ],
+          "radius": 0.5,
+          "startAngle": 120.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:8:8:3",
+        "vertices": [
+          "p:8000000:6928203",
+          "p:8250000:6495191"
+        ],
+        "sector": 3,
+        "circle": {
+          "center": [
+            8.5,
+            6.928203230275509
+          ],
+          "radius": 0.5,
+          "startAngle": 180.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:8:8:4",
+        "vertices": [
+          "p:8250000:6495191",
+          "p:8750000:6495191"
+        ],
+        "sector": 4,
+        "circle": {
+          "center": [
+            8.5,
+            6.928203230275509
+          ],
+          "radius": 0.5,
+          "startAngle": 240.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:8:8:5",
+        "vertices": [
+          "p:8750000:6495191",
+          "p:9000000:6928203"
+        ],
+        "sector": 5,
+        "circle": {
+          "center": [
+            8.5,
             6.928203230275509
           ],
           "radius": 0.5,
@@ -10370,6 +11496,108 @@
           "startAngle": 300.0,
           "spanAngle": 60.0
         }
+      },
+      {
+        "id": "arc:9:9:0",
+        "vertices": [
+          "p:9500000:7794229",
+          "p:9250000:8227241"
+        ],
+        "sector": 0,
+        "circle": {
+          "center": [
+            9.0,
+            7.794228634059947
+          ],
+          "radius": 0.5,
+          "startAngle": 0.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:9:9:1",
+        "vertices": [
+          "p:9250000:8227241",
+          "p:8750000:8227241"
+        ],
+        "sector": 1,
+        "circle": {
+          "center": [
+            9.0,
+            7.794228634059947
+          ],
+          "radius": 0.5,
+          "startAngle": 60.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:9:9:2",
+        "vertices": [
+          "p:8750000:8227241",
+          "p:8500000:7794229"
+        ],
+        "sector": 2,
+        "circle": {
+          "center": [
+            9.0,
+            7.794228634059947
+          ],
+          "radius": 0.5,
+          "startAngle": 120.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:9:9:3",
+        "vertices": [
+          "p:8500000:7794229",
+          "p:8750000:7361216"
+        ],
+        "sector": 3,
+        "circle": {
+          "center": [
+            9.0,
+            7.794228634059947
+          ],
+          "radius": 0.5,
+          "startAngle": 180.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:9:9:4",
+        "vertices": [
+          "p:8750000:7361216",
+          "p:9250000:7361216"
+        ],
+        "sector": 4,
+        "circle": {
+          "center": [
+            9.0,
+            7.794228634059947
+          ],
+          "radius": 0.5,
+          "startAngle": 240.0,
+          "spanAngle": 60.0
+        }
+      },
+      {
+        "id": "arc:9:9:5",
+        "vertices": [
+          "p:9250000:7361216",
+          "p:9500000:7794229"
+        ],
+        "sector": 5,
+        "circle": {
+          "center": [
+            9.0,
+            7.794228634059947
+          ],
+          "radius": 0.5,
+          "startAngle": 300.0,
+          "spanAngle": 60.0
+        }
       }
     ],
     "cells": [
@@ -10497,6 +11725,22 @@
         ],
         "center": [
           7.5,
+          0.0
+        ],
+        "kind": "circle"
+      },
+      {
+        "id": "circle:0:8",
+        "edgeIds": [
+          "arc:0:8:0",
+          "arc:0:8:1",
+          "arc:0:8:2",
+          "arc:0:8:3",
+          "arc:0:8:4",
+          "arc:0:8:5"
+        ],
+        "center": [
+          8.5,
           0.0
         ],
         "kind": "circle"
@@ -10646,6 +11890,22 @@
         "kind": "circle"
       },
       {
+        "id": "circle:1:9",
+        "edgeIds": [
+          "arc:1:9:0",
+          "arc:1:9:1",
+          "arc:1:9:2",
+          "arc:1:9:3",
+          "arc:1:9:4",
+          "arc:1:9:5"
+        ],
+        "center": [
+          9.0,
+          0.8660254037844386
+        ],
+        "kind": "circle"
+      },
+      {
         "id": "circle:2:0",
         "edgeIds": [
           "arc:2:0:0",
@@ -10769,6 +12029,22 @@
         ],
         "center": [
           7.5,
+          1.7320508075688772
+        ],
+        "kind": "circle"
+      },
+      {
+        "id": "circle:2:8",
+        "edgeIds": [
+          "arc:2:8:0",
+          "arc:2:8:1",
+          "arc:2:8:2",
+          "arc:2:8:3",
+          "arc:2:8:4",
+          "arc:2:8:5"
+        ],
+        "center": [
+          8.5,
           1.7320508075688772
         ],
         "kind": "circle"
@@ -10918,6 +12194,22 @@
         "kind": "circle"
       },
       {
+        "id": "circle:3:9",
+        "edgeIds": [
+          "arc:3:9:0",
+          "arc:3:9:1",
+          "arc:3:9:2",
+          "arc:3:9:3",
+          "arc:3:9:4",
+          "arc:3:9:5"
+        ],
+        "center": [
+          9.0,
+          2.598076211353316
+        ],
+        "kind": "circle"
+      },
+      {
         "id": "circle:4:0",
         "edgeIds": [
           "arc:4:0:0",
@@ -11041,6 +12333,22 @@
         ],
         "center": [
           7.5,
+          3.4641016151377544
+        ],
+        "kind": "circle"
+      },
+      {
+        "id": "circle:4:8",
+        "edgeIds": [
+          "arc:4:8:0",
+          "arc:4:8:1",
+          "arc:4:8:2",
+          "arc:4:8:3",
+          "arc:4:8:4",
+          "arc:4:8:5"
+        ],
+        "center": [
+          8.5,
           3.4641016151377544
         ],
         "kind": "circle"
@@ -11190,6 +12498,22 @@
         "kind": "circle"
       },
       {
+        "id": "circle:5:9",
+        "edgeIds": [
+          "arc:5:9:0",
+          "arc:5:9:1",
+          "arc:5:9:2",
+          "arc:5:9:3",
+          "arc:5:9:4",
+          "arc:5:9:5"
+        ],
+        "center": [
+          9.0,
+          4.330127018922193
+        ],
+        "kind": "circle"
+      },
+      {
         "id": "circle:6:0",
         "edgeIds": [
           "arc:6:0:0",
@@ -11313,6 +12637,22 @@
         ],
         "center": [
           7.5,
+          5.196152422706632
+        ],
+        "kind": "circle"
+      },
+      {
+        "id": "circle:6:8",
+        "edgeIds": [
+          "arc:6:8:0",
+          "arc:6:8:1",
+          "arc:6:8:2",
+          "arc:6:8:3",
+          "arc:6:8:4",
+          "arc:6:8:5"
+        ],
+        "center": [
+          8.5,
           5.196152422706632
         ],
         "kind": "circle"
@@ -11462,6 +12802,22 @@
         "kind": "circle"
       },
       {
+        "id": "circle:7:9",
+        "edgeIds": [
+          "arc:7:9:0",
+          "arc:7:9:1",
+          "arc:7:9:2",
+          "arc:7:9:3",
+          "arc:7:9:4",
+          "arc:7:9:5"
+        ],
+        "center": [
+          9.0,
+          6.06217782649107
+        ],
+        "kind": "circle"
+      },
+      {
         "id": "circle:8:0",
         "edgeIds": [
           "arc:8:0:0",
@@ -11585,6 +12941,22 @@
         ],
         "center": [
           7.5,
+          6.928203230275509
+        ],
+        "kind": "circle"
+      },
+      {
+        "id": "circle:8:8",
+        "edgeIds": [
+          "arc:8:8:0",
+          "arc:8:8:1",
+          "arc:8:8:2",
+          "arc:8:8:3",
+          "arc:8:8:4",
+          "arc:8:8:5"
+        ],
+        "center": [
+          8.5,
           6.928203230275509
         ],
         "kind": "circle"
@@ -11729,6 +13101,22 @@
         ],
         "center": [
           8.0,
+          7.794228634059947
+        ],
+        "kind": "circle"
+      },
+      {
+        "id": "circle:9:9",
+        "edgeIds": [
+          "arc:9:9:0",
+          "arc:9:9:1",
+          "arc:9:9:2",
+          "arc:9:9:3",
+          "arc:9:9:4",
+          "arc:9:9:5"
+        ],
+        "center": [
+          9.0,
           7.794228634059947
         ],
         "kind": "circle"
@@ -11916,6 +13304,19 @@
         "kind": "triangle"
       },
       {
+        "id": "tri:circle:0:7+circle:0:8+circle:1:8",
+        "edgeIds": [
+          "arc:0:7:0",
+          "arc:0:8:2",
+          "arc:1:8:4"
+        ],
+        "center": [
+          8.0,
+          0.28867513459481287
+        ],
+        "kind": "triangle"
+      },
+      {
         "id": "tri:circle:0:7+circle:1:7+circle:1:8",
         "edgeIds": [
           "arc:0:7:1",
@@ -11924,6 +13325,19 @@
         ],
         "center": [
           7.5,
+          0.5773502691896257
+        ],
+        "kind": "triangle"
+      },
+      {
+        "id": "tri:circle:0:8+circle:1:8+circle:1:9",
+        "edgeIds": [
+          "arc:0:8:1",
+          "arc:1:8:5",
+          "arc:1:9:3"
+        ],
+        "center": [
+          8.5,
           0.5773502691896257
         ],
         "kind": "triangle"
@@ -12124,6 +13538,32 @@
         "kind": "triangle"
       },
       {
+        "id": "tri:circle:1:8+circle:1:9+circle:2:8",
+        "edgeIds": [
+          "arc:1:8:0",
+          "arc:1:9:2",
+          "arc:2:8:4"
+        ],
+        "center": [
+          8.5,
+          1.1547005383792515
+        ],
+        "kind": "triangle"
+      },
+      {
+        "id": "tri:circle:1:8+circle:2:7+circle:2:8",
+        "edgeIds": [
+          "arc:1:8:1",
+          "arc:2:7:5",
+          "arc:2:8:3"
+        ],
+        "center": [
+          8.0,
+          1.4433756729740643
+        ],
+        "kind": "triangle"
+      },
+      {
         "id": "tri:circle:2:0+circle:2:1+circle:3:1",
         "edgeIds": [
           "arc:2:0:0",
@@ -12306,6 +13746,19 @@
         "kind": "triangle"
       },
       {
+        "id": "tri:circle:2:7+circle:2:8+circle:3:8",
+        "edgeIds": [
+          "arc:2:7:0",
+          "arc:2:8:2",
+          "arc:3:8:4"
+        ],
+        "center": [
+          8.0,
+          2.0207259421636903
+        ],
+        "kind": "triangle"
+      },
+      {
         "id": "tri:circle:2:7+circle:3:7+circle:3:8",
         "edgeIds": [
           "arc:2:7:1",
@@ -12314,6 +13767,19 @@
         ],
         "center": [
           7.5,
+          2.309401076758503
+        ],
+        "kind": "triangle"
+      },
+      {
+        "id": "tri:circle:2:8+circle:3:8+circle:3:9",
+        "edgeIds": [
+          "arc:2:8:1",
+          "arc:3:8:5",
+          "arc:3:9:3"
+        ],
+        "center": [
+          8.5,
           2.309401076758503
         ],
         "kind": "triangle"
@@ -12514,6 +13980,32 @@
         "kind": "triangle"
       },
       {
+        "id": "tri:circle:3:8+circle:3:9+circle:4:8",
+        "edgeIds": [
+          "arc:3:8:0",
+          "arc:3:9:2",
+          "arc:4:8:4"
+        ],
+        "center": [
+          8.5,
+          2.8867513459481287
+        ],
+        "kind": "triangle"
+      },
+      {
+        "id": "tri:circle:3:8+circle:4:7+circle:4:8",
+        "edgeIds": [
+          "arc:3:8:1",
+          "arc:4:7:5",
+          "arc:4:8:3"
+        ],
+        "center": [
+          8.0,
+          3.1754264805429417
+        ],
+        "kind": "triangle"
+      },
+      {
         "id": "tri:circle:4:0+circle:4:1+circle:5:1",
         "edgeIds": [
           "arc:4:0:0",
@@ -12696,6 +14188,19 @@
         "kind": "triangle"
       },
       {
+        "id": "tri:circle:4:7+circle:4:8+circle:5:8",
+        "edgeIds": [
+          "arc:4:7:0",
+          "arc:4:8:2",
+          "arc:5:8:4"
+        ],
+        "center": [
+          8.0,
+          3.752776749732567
+        ],
+        "kind": "triangle"
+      },
+      {
         "id": "tri:circle:4:7+circle:5:7+circle:5:8",
         "edgeIds": [
           "arc:4:7:1",
@@ -12704,6 +14209,19 @@
         ],
         "center": [
           7.5,
+          4.04145188432738
+        ],
+        "kind": "triangle"
+      },
+      {
+        "id": "tri:circle:4:8+circle:5:8+circle:5:9",
+        "edgeIds": [
+          "arc:4:8:1",
+          "arc:5:8:5",
+          "arc:5:9:3"
+        ],
+        "center": [
+          8.5,
           4.04145188432738
         ],
         "kind": "triangle"
@@ -12904,6 +14422,32 @@
         "kind": "triangle"
       },
       {
+        "id": "tri:circle:5:8+circle:5:9+circle:6:8",
+        "edgeIds": [
+          "arc:5:8:0",
+          "arc:5:9:2",
+          "arc:6:8:4"
+        ],
+        "center": [
+          8.5,
+          4.618802153517006
+        ],
+        "kind": "triangle"
+      },
+      {
+        "id": "tri:circle:5:8+circle:6:7+circle:6:8",
+        "edgeIds": [
+          "arc:5:8:1",
+          "arc:6:7:5",
+          "arc:6:8:3"
+        ],
+        "center": [
+          8.0,
+          4.907477288111819
+        ],
+        "kind": "triangle"
+      },
+      {
         "id": "tri:circle:6:0+circle:6:1+circle:7:1",
         "edgeIds": [
           "arc:6:0:0",
@@ -13086,6 +14630,19 @@
         "kind": "triangle"
       },
       {
+        "id": "tri:circle:6:7+circle:6:8+circle:7:8",
+        "edgeIds": [
+          "arc:6:7:0",
+          "arc:6:8:2",
+          "arc:7:8:4"
+        ],
+        "center": [
+          8.0,
+          5.484827557301444
+        ],
+        "kind": "triangle"
+      },
+      {
         "id": "tri:circle:6:7+circle:7:7+circle:7:8",
         "edgeIds": [
           "arc:6:7:1",
@@ -13094,6 +14651,19 @@
         ],
         "center": [
           7.5,
+          5.773502691896257
+        ],
+        "kind": "triangle"
+      },
+      {
+        "id": "tri:circle:6:8+circle:7:8+circle:7:9",
+        "edgeIds": [
+          "arc:6:8:1",
+          "arc:7:8:5",
+          "arc:7:9:3"
+        ],
+        "center": [
+          8.5,
           5.773502691896257
         ],
         "kind": "triangle"
@@ -13294,6 +14864,32 @@
         "kind": "triangle"
       },
       {
+        "id": "tri:circle:7:8+circle:7:9+circle:8:8",
+        "edgeIds": [
+          "arc:7:8:0",
+          "arc:7:9:2",
+          "arc:8:8:4"
+        ],
+        "center": [
+          8.5,
+          6.3508529610858835
+        ],
+        "kind": "triangle"
+      },
+      {
+        "id": "tri:circle:7:8+circle:8:7+circle:8:8",
+        "edgeIds": [
+          "arc:7:8:1",
+          "arc:8:7:5",
+          "arc:8:8:3"
+        ],
+        "center": [
+          8.0,
+          6.639528095680696
+        ],
+        "kind": "triangle"
+      },
+      {
         "id": "tri:circle:8:0+circle:8:1+circle:9:1",
         "edgeIds": [
           "arc:8:0:0",
@@ -13476,6 +15072,19 @@
         "kind": "triangle"
       },
       {
+        "id": "tri:circle:8:7+circle:8:8+circle:9:8",
+        "edgeIds": [
+          "arc:8:7:0",
+          "arc:8:8:2",
+          "arc:9:8:4"
+        ],
+        "center": [
+          8.0,
+          7.216878364870322
+        ],
+        "kind": "triangle"
+      },
+      {
         "id": "tri:circle:8:7+circle:9:7+circle:9:8",
         "edgeIds": [
           "arc:8:7:1",
@@ -13484,6 +15093,19 @@
         ],
         "center": [
           7.5,
+          7.505553499465134
+        ],
+        "kind": "triangle"
+      },
+      {
+        "id": "tri:circle:8:8+circle:9:8+circle:9:9",
+        "edgeIds": [
+          "arc:8:8:1",
+          "arc:9:8:5",
+          "arc:9:9:3"
+        ],
+        "center": [
+          8.5,
           7.505553499465134
         ],
         "kind": "triangle"
@@ -15014,57 +16636,89 @@
       ],
       "p:8000000:0": [
         "arc:0:7:0",
-        "arc:0:7:5"
+        "arc:0:7:5",
+        "arc:0:8:2",
+        "arc:0:8:3"
       ],
       "p:8000000:1732051": [
         "arc:2:7:0",
-        "arc:2:7:5"
+        "arc:2:7:5",
+        "arc:2:8:2",
+        "arc:2:8:3"
       ],
       "p:8000000:3464102": [
         "arc:4:7:0",
-        "arc:4:7:5"
+        "arc:4:7:5",
+        "arc:4:8:2",
+        "arc:4:8:3"
       ],
       "p:8000000:5196152": [
         "arc:6:7:0",
-        "arc:6:7:5"
+        "arc:6:7:5",
+        "arc:6:8:2",
+        "arc:6:8:3"
       ],
       "p:8000000:6928203": [
         "arc:8:7:0",
-        "arc:8:7:5"
+        "arc:8:7:5",
+        "arc:8:8:2",
+        "arc:8:8:3"
+      ],
+      "p:8250000:-433013": [
+        "arc:0:8:3",
+        "arc:0:8:4"
       ],
       "p:8250000:1299038": [
         "arc:1:8:0",
-        "arc:1:8:1"
+        "arc:1:8:1",
+        "arc:2:8:3",
+        "arc:2:8:4"
       ],
       "p:8250000:2165064": [
+        "arc:2:8:1",
+        "arc:2:8:2",
         "arc:3:8:4",
         "arc:3:8:5"
       ],
       "p:8250000:3031089": [
         "arc:3:8:0",
-        "arc:3:8:1"
+        "arc:3:8:1",
+        "arc:4:8:3",
+        "arc:4:8:4"
       ],
       "p:8250000:3897114": [
+        "arc:4:8:1",
+        "arc:4:8:2",
         "arc:5:8:4",
         "arc:5:8:5"
       ],
       "p:8250000:433013": [
+        "arc:0:8:1",
+        "arc:0:8:2",
         "arc:1:8:4",
         "arc:1:8:5"
       ],
       "p:8250000:4763140": [
         "arc:5:8:0",
-        "arc:5:8:1"
+        "arc:5:8:1",
+        "arc:6:8:3",
+        "arc:6:8:4"
       ],
       "p:8250000:5629165": [
+        "arc:6:8:1",
+        "arc:6:8:2",
         "arc:7:8:4",
         "arc:7:8:5"
       ],
       "p:8250000:6495191": [
         "arc:7:8:0",
-        "arc:7:8:1"
+        "arc:7:8:1",
+        "arc:8:8:3",
+        "arc:8:8:4"
       ],
       "p:8250000:7361216": [
+        "arc:8:8:1",
+        "arc:8:8:2",
         "arc:9:8:4",
         "arc:9:8:5"
       ],
@@ -15074,23 +16728,175 @@
       ],
       "p:8500000:2598076": [
         "arc:3:8:0",
-        "arc:3:8:5"
+        "arc:3:8:5",
+        "arc:3:9:2",
+        "arc:3:9:3"
       ],
       "p:8500000:4330127": [
         "arc:5:8:0",
-        "arc:5:8:5"
+        "arc:5:8:5",
+        "arc:5:9:2",
+        "arc:5:9:3"
       ],
       "p:8500000:6062178": [
         "arc:7:8:0",
-        "arc:7:8:5"
+        "arc:7:8:5",
+        "arc:7:9:2",
+        "arc:7:9:3"
       ],
       "p:8500000:7794229": [
         "arc:9:8:0",
-        "arc:9:8:5"
+        "arc:9:8:5",
+        "arc:9:9:2",
+        "arc:9:9:3"
       ],
       "p:8500000:866025": [
         "arc:1:8:0",
-        "arc:1:8:5"
+        "arc:1:8:5",
+        "arc:1:9:2",
+        "arc:1:9:3"
+      ],
+      "p:8750000:-433013": [
+        "arc:0:8:4",
+        "arc:0:8:5"
+      ],
+      "p:8750000:1299038": [
+        "arc:1:9:1",
+        "arc:1:9:2",
+        "arc:2:8:4",
+        "arc:2:8:5"
+      ],
+      "p:8750000:2165064": [
+        "arc:2:8:0",
+        "arc:2:8:1",
+        "arc:3:9:3",
+        "arc:3:9:4"
+      ],
+      "p:8750000:3031089": [
+        "arc:3:9:1",
+        "arc:3:9:2",
+        "arc:4:8:4",
+        "arc:4:8:5"
+      ],
+      "p:8750000:3897114": [
+        "arc:4:8:0",
+        "arc:4:8:1",
+        "arc:5:9:3",
+        "arc:5:9:4"
+      ],
+      "p:8750000:433013": [
+        "arc:0:8:0",
+        "arc:0:8:1",
+        "arc:1:9:3",
+        "arc:1:9:4"
+      ],
+      "p:8750000:4763140": [
+        "arc:5:9:1",
+        "arc:5:9:2",
+        "arc:6:8:4",
+        "arc:6:8:5"
+      ],
+      "p:8750000:5629165": [
+        "arc:6:8:0",
+        "arc:6:8:1",
+        "arc:7:9:3",
+        "arc:7:9:4"
+      ],
+      "p:8750000:6495191": [
+        "arc:7:9:1",
+        "arc:7:9:2",
+        "arc:8:8:4",
+        "arc:8:8:5"
+      ],
+      "p:8750000:7361216": [
+        "arc:8:8:0",
+        "arc:8:8:1",
+        "arc:9:9:3",
+        "arc:9:9:4"
+      ],
+      "p:8750000:8227241": [
+        "arc:9:9:1",
+        "arc:9:9:2"
+      ],
+      "p:9000000:0": [
+        "arc:0:8:0",
+        "arc:0:8:5"
+      ],
+      "p:9000000:1732051": [
+        "arc:2:8:0",
+        "arc:2:8:5"
+      ],
+      "p:9000000:3464102": [
+        "arc:4:8:0",
+        "arc:4:8:5"
+      ],
+      "p:9000000:5196152": [
+        "arc:6:8:0",
+        "arc:6:8:5"
+      ],
+      "p:9000000:6928203": [
+        "arc:8:8:0",
+        "arc:8:8:5"
+      ],
+      "p:9250000:1299038": [
+        "arc:1:9:0",
+        "arc:1:9:1"
+      ],
+      "p:9250000:2165064": [
+        "arc:3:9:4",
+        "arc:3:9:5"
+      ],
+      "p:9250000:3031089": [
+        "arc:3:9:0",
+        "arc:3:9:1"
+      ],
+      "p:9250000:3897114": [
+        "arc:5:9:4",
+        "arc:5:9:5"
+      ],
+      "p:9250000:433013": [
+        "arc:1:9:4",
+        "arc:1:9:5"
+      ],
+      "p:9250000:4763140": [
+        "arc:5:9:0",
+        "arc:5:9:1"
+      ],
+      "p:9250000:5629165": [
+        "arc:7:9:4",
+        "arc:7:9:5"
+      ],
+      "p:9250000:6495191": [
+        "arc:7:9:0",
+        "arc:7:9:1"
+      ],
+      "p:9250000:7361216": [
+        "arc:9:9:4",
+        "arc:9:9:5"
+      ],
+      "p:9250000:8227241": [
+        "arc:9:9:0",
+        "arc:9:9:1"
+      ],
+      "p:9500000:2598076": [
+        "arc:3:9:0",
+        "arc:3:9:5"
+      ],
+      "p:9500000:4330127": [
+        "arc:5:9:0",
+        "arc:5:9:5"
+      ],
+      "p:9500000:6062178": [
+        "arc:7:9:0",
+        "arc:7:9:5"
+      ],
+      "p:9500000:7794229": [
+        "arc:9:9:0",
+        "arc:9:9:5"
+      ],
+      "p:9500000:866025": [
+        "arc:1:9:0",
+        "arc:1:9:5"
       ]
     }
   }

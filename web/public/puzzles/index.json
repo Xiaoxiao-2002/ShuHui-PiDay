@@ -1,146 +1,247 @@
 {
   "schemaVersion": 1,
   "dataVersion": "piday-2026-v1",
+  "catalogVersion": "2026.1",
   "puzzles": [
     {
-      "id": "TSH-01",
+      "id": "TSH-2026-01",
       "difficulty": "beginner",
       "difficultyLabel": "初级 Beginner",
       "sourceHash": "a19864936efc1c2d728ab99e4ddc9f52600c84ed57996a9b2b0cf0859bf4cbcd",
-      "file": "TSH-01.json"
+      "file": "TSH-2026-01.json",
+      "publishedAt": "2026-07-06",
+      "updatedAt": "2026-07-06",
+      "revision": 1,
+      "clueCount": 29,
+      "cellCount": 29
     },
     {
-      "id": "TSH-02",
+      "id": "TSH-2026-02",
       "difficulty": "beginner",
       "difficultyLabel": "初级 Beginner",
       "sourceHash": "195f82464a9d36a33ac2903451cde89777a063c8acdf8b7608d12f0f62a8a8e0",
-      "file": "TSH-02.json"
+      "file": "TSH-2026-02.json",
+      "publishedAt": "2026-07-06",
+      "updatedAt": "2026-07-06",
+      "revision": 1,
+      "clueCount": 68,
+      "cellCount": 68
     },
     {
-      "id": "TSH-03",
+      "id": "TSH-2026-03",
       "difficulty": "beginner",
       "difficultyLabel": "初级 Beginner",
       "sourceHash": "18bb5f47d0574c4059f50f1e6ce6abbaea48ccf8150d227b4a49988bbbef2d05",
-      "file": "TSH-03.json"
+      "file": "TSH-2026-03.json",
+      "publishedAt": "2026-07-06",
+      "updatedAt": "2026-07-06",
+      "revision": 1,
+      "clueCount": 50,
+      "cellCount": 50
     },
     {
-      "id": "TSH-04",
+      "id": "TSH-2026-04",
       "difficulty": "beginner",
       "difficultyLabel": "初级 Beginner",
       "sourceHash": "11823b8a9e0eb89e034659e0eeaaee3ecb5243e950ddd1e28fd0513e8dcde799",
-      "file": "TSH-04.json"
+      "file": "TSH-2026-04.json",
+      "publishedAt": "2026-07-06",
+      "updatedAt": "2026-07-06",
+      "revision": 1,
+      "clueCount": 68,
+      "cellCount": 68
     },
     {
-      "id": "TSH-05",
+      "id": "TSH-2026-05",
       "difficulty": "beginner",
       "difficultyLabel": "初级 Beginner",
       "sourceHash": "ec6b85976fea6c1f695f1c07b4c7e73a0450026d9c560a358217e05d35a58299",
-      "file": "TSH-05.json"
+      "file": "TSH-2026-05.json",
+      "publishedAt": "2026-07-06",
+      "updatedAt": "2026-07-06",
+      "revision": 1,
+      "clueCount": 29,
+      "cellCount": 29
     },
     {
-      "id": "TSH-06",
+      "id": "TSH-2026-06",
       "difficulty": "beginner",
       "difficultyLabel": "初级 Beginner",
       "sourceHash": "4d12fe6961770edab363efd612baeadeabf0f4014da7ae6dde95d98df02b0a31",
-      "file": "TSH-06.json"
+      "file": "TSH-2026-06.json",
+      "publishedAt": "2026-07-06",
+      "updatedAt": "2026-07-06",
+      "revision": 1,
+      "clueCount": 5,
+      "cellCount": 43
     },
     {
-      "id": "TSH-07",
+      "id": "TSH-2026-07",
       "difficulty": "beginner",
       "difficultyLabel": "初级 Beginner",
       "sourceHash": "b5dc1b9c778e1d62b70b8c4e4bf2df90fb70e3c8f4ab52b1c9bc71392f291bbd",
-      "file": "TSH-07.json"
+      "file": "TSH-2026-07.json",
+      "publishedAt": "2026-07-06",
+      "updatedAt": "2026-07-06",
+      "revision": 1,
+      "clueCount": 5,
+      "cellCount": 29
     },
     {
-      "id": "TSH-08",
+      "id": "TSH-2026-08",
       "difficulty": "beginner",
       "difficultyLabel": "初级 Beginner",
       "sourceHash": "ef06d84f12fab8acddf6e2d0af228d3e4c57cedcdbe307be6867c95d45132c72",
-      "file": "TSH-08.json"
+      "file": "TSH-2026-08.json",
+      "publishedAt": "2026-07-06",
+      "updatedAt": "2026-07-06",
+      "revision": 1,
+      "clueCount": 5,
+      "cellCount": 29
     },
     {
-      "id": "TSH-09",
+      "id": "TSH-2026-09",
       "difficulty": "medium",
       "difficultyLabel": "中级 Medium",
       "sourceHash": "87543e7740339b51c31f1e15ec05a9ce7b1162f8fbc488d1d21045fbc0298cd1",
-      "file": "TSH-09.json"
+      "file": "TSH-2026-09.json",
+      "publishedAt": "2026-07-06",
+      "updatedAt": "2026-07-06",
+      "revision": 1,
+      "clueCount": 18,
+      "cellCount": 50
     },
     {
-      "id": "TSH-10",
+      "id": "TSH-2026-10",
       "difficulty": "medium",
       "difficultyLabel": "中级 Medium",
       "sourceHash": "48f2d7e951ed50cb51696f63e95e6d5b8da6771e4ed50a59ebe054d12c10185d",
-      "file": "TSH-10.json"
+      "file": "TSH-2026-10.json",
+      "publishedAt": "2026-07-06",
+      "updatedAt": "2026-07-06",
+      "revision": 1,
+      "clueCount": 14,
+      "cellCount": 43
     },
     {
-      "id": "TSH-11",
+      "id": "TSH-2026-11",
       "difficulty": "medium",
       "difficultyLabel": "中级 Medium",
       "sourceHash": "3f135592882d7bf29d5f90ef30d30ea0cd30183e3365fecadd27a6545dfdcf5e",
-      "file": "TSH-11.json"
+      "file": "TSH-2026-11.json",
+      "publishedAt": "2026-07-06",
+      "updatedAt": "2026-07-06",
+      "revision": 1,
+      "clueCount": 18,
+      "cellCount": 50
     },
     {
-      "id": "TSH-12",
+      "id": "TSH-2026-12",
       "difficulty": "medium",
       "difficultyLabel": "中级 Medium",
       "sourceHash": "41e835e1beea8bf98f4da67f627c22ede4e1fce2f64e4937d159a1696fe0f220",
-      "file": "TSH-12.json"
+      "file": "TSH-2026-12.json",
+      "publishedAt": "2026-07-06",
+      "updatedAt": "2026-07-06",
+      "revision": 1,
+      "clueCount": 18,
+      "cellCount": 50
     },
     {
-      "id": "TSH-13",
+      "id": "TSH-2026-13",
       "difficulty": "difficult",
       "difficultyLabel": "高级 Difficult",
       "sourceHash": "c3c6c7ebda3b23d20cd68cb940614888d69f37993025590ddfea5e922e50c94c",
-      "file": "TSH-13.json"
+      "file": "TSH-2026-13.json",
+      "publishedAt": "2026-07-06",
+      "updatedAt": "2026-07-06",
+      "revision": 1,
+      "clueCount": 73,
+      "cellCount": 276
     },
     {
-      "id": "TSH-14",
+      "id": "TSH-2026-14",
       "difficulty": "difficult",
       "difficultyLabel": "高级 Difficult",
       "sourceHash": "3eb2a9607f2c318a5ee676cc60fed633720b4222bd942a6743bfbcb030a6e5a6",
-      "file": "TSH-14.json"
+      "file": "TSH-2026-14.json",
+      "publishedAt": "2026-07-06",
+      "updatedAt": "2026-07-06",
+      "revision": 1,
+      "clueCount": 56,
+      "cellCount": 248
     },
     {
-      "id": "TSH-15",
+      "id": "TSH-2026-15",
       "difficulty": "difficult",
       "difficultyLabel": "高级 Difficult",
       "sourceHash": "c00f232c889180817669d2308caecaad01a02a4635265bc0ad2b9094414c9c58",
-      "file": "TSH-15.json"
+      "file": "TSH-2026-15.json",
+      "publishedAt": "2026-07-06",
+      "updatedAt": "2026-07-06",
+      "revision": 1,
+      "clueCount": 47,
+      "cellCount": 220
     },
     {
-      "id": "TSH-16",
+      "id": "TSH-2026-16",
       "difficulty": "difficult",
       "difficultyLabel": "高级 Difficult",
       "sourceHash": "66c32e04fd37e1544a91278e1e6cc05734088d1976140038be0a1078115466e0",
-      "file": "TSH-16.json"
+      "file": "TSH-2026-16.json",
+      "publishedAt": "2026-07-06",
+      "updatedAt": "2026-07-06",
+      "revision": 1,
+      "clueCount": 47,
+      "cellCount": 248
     },
     {
-      "id": "TSH-17",
+      "id": "TSH-2026-17",
       "difficulty": "expert",
       "difficultyLabel": "专家 Expert",
       "sourceHash": "bdd3edffcaf073cba7d9c8e2e93e1991b7c645792de62f889059d501f63e3bbe",
-      "file": "TSH-17.json"
+      "file": "TSH-2026-17.json",
+      "publishedAt": "2026-07-06",
+      "updatedAt": "2026-07-06",
+      "revision": 1,
+      "clueCount": 80,
+      "cellCount": 353
     },
     {
-      "id": "TSH-18",
+      "id": "TSH-2026-18",
       "difficulty": "expert",
       "difficultyLabel": "专家 Expert",
       "sourceHash": "76b377583b73f9c4a06fca6fe9acb8a1aa73c4f94ac25686b103f05772926ac9",
-      "file": "TSH-18.json"
+      "file": "TSH-2026-18.json",
+      "publishedAt": "2026-07-06",
+      "updatedAt": "2026-07-06",
+      "revision": 1,
+      "clueCount": 91,
+      "cellCount": 387
     },
     {
-      "id": "TSH-19",
+      "id": "TSH-2026-19",
       "difficulty": "expert",
       "difficultyLabel": "专家 Expert",
       "sourceHash": "32ed99b78899c0acf81cc32b8f7a45262c0359c3fdb30bf46eb924cb45d40b1c",
-      "file": "TSH-19.json"
+      "file": "TSH-2026-19.json",
+      "publishedAt": "2026-07-06",
+      "updatedAt": "2026-07-06",
+      "revision": 1,
+      "clueCount": 88,
+      "cellCount": 369
     },
     {
-      "id": "TSH-20",
+      "id": "TSH-2026-20",
       "difficulty": "expert",
       "difficultyLabel": "专家 Expert",
       "sourceHash": "4dbc0b91a59321740e4bd0055f0922ed01db2952a37997973884a1e838e31672",
-      "file": "TSH-20.json"
+      "file": "TSH-2026-20.json",
+      "publishedAt": "2026-07-06",
+      "updatedAt": "2026-07-06",
+      "revision": 1,
+      "clueCount": 104,
+      "cellCount": 353
     }
   ]
 }

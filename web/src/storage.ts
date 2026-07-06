@@ -34,11 +34,19 @@ export function storageAvailable(): boolean {
 }
 
 export function loadAttempt(puzzle: PlayablePuzzleV1): AttemptStateV1 | null {
-  const attempt = readJson<AttemptStateV1>(attemptKey(puzzle.id));
+  const legacyId = puzzle.id.match(/^TSH-2026-(\d{2})$/)?.[1];
+  const legacyKey = legacyId ? attemptKey(`TSH-${legacyId}`) : null;
+  const attempt = readJson<AttemptStateV1>(attemptKey(puzzle.id)) ?? (legacyKey ? readJson<AttemptStateV1>(legacyKey) : null);
   if (!attempt) return null;
   if (attempt.schemaVersion !== 1 || attempt.dataVersion !== puzzle.dataVersion || attempt.sourceHash !== puzzle.sourceHash) {
     clearAttempt(puzzle.id);
     return null;
+  }
+  if (attempt.puzzleId !== puzzle.id) {
+    const migrated = { ...attempt, puzzleId: puzzle.id };
+    saveAttempt(migrated);
+    if (legacyKey) localStorage.removeItem(legacyKey);
+    return migrated;
   }
   return attempt;
 }
@@ -56,7 +64,19 @@ export function clearAttempt(puzzleId: string): void {
 }
 
 export function loadCompleted(): Record<string, CompletedPuzzleV1> {
-  return readJson<Record<string, CompletedPuzzleV1>>(COMPLETED_KEY) ?? {};
+  const completed = readJson<Record<string, CompletedPuzzleV1>>(COMPLETED_KEY) ?? {};
+  let changed = false;
+  for (let index = 1; index <= 20; index += 1) {
+    const oldId = `TSH-${String(index).padStart(2, "0")}`;
+    const newId = `TSH-2026-${String(index).padStart(2, "0")}`;
+    if (!completed[oldId] || completed[newId]) continue;
+    const old = completed[oldId];
+    completed[newId] = { ...old, puzzleId: newId, latestReceipt: { ...old.latestReceipt, puzzleId: newId } };
+    delete completed[oldId];
+    changed = true;
+  }
+  if (changed) writeJson(COMPLETED_KEY, completed);
+  return completed;
 }
 
 export function saveCompletion(receipt: CompletionReceiptV1, dataVersion: string): Record<string, CompletedPuzzleV1> {

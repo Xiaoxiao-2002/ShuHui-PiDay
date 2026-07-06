@@ -1,13 +1,14 @@
 import { useEffect, useMemo, useState } from "react";
 import { loadPuzzleIndex } from "./api";
 import { PuzzlePlayer } from "./components/PuzzlePlayer";
-import { TutorialPage } from "./components/TutorialPage";
+import { PuzzlePreviewModal } from "./components/PuzzlePreviewModal";
+import { TutorialHub, TutorialPage } from "./components/TutorialPage";
 import { UpdateBanner } from "./components/UpdateBanner";
 import { formatElapsed } from "./format";
 import { LocalReceiptIssuer } from "./receipt";
 import { loadCompleted, storageAvailable } from "./storage";
 import type { CompletedPuzzleV1, Difficulty, PuzzleIndexItem, PuzzleIndexV1 } from "./types";
-import { loadTutorialProgress } from "./tutorial";
+import { loadTutorialProgress, type TutorialTrack } from "./tutorial";
 
 const difficultyOrder: Difficulty[] = ["beginner", "medium", "difficult", "expert"];
 const labels: Record<Difficulty, string> = {
@@ -23,8 +24,9 @@ export default function App() {
   const [error, setError] = useState("");
   const [selectedDifficulty, setSelectedDifficulty] = useState<Difficulty | "all">("all");
   const [active, setActive] = useState<PuzzleIndexItem | null>(null);
-  const [tutorialActive, setTutorialActive] = useState(false);
-  const [tutorialProgress, setTutorialProgress] = useState(loadTutorialProgress);
+  const [preview, setPreview] = useState<PuzzleIndexItem | null>(null);
+  const [tutorialRoute, setTutorialRoute] = useState<"hub" | TutorialTrack | null>(null);
+  const [tutorialProgress, setTutorialProgress] = useState(() => ({ basic: loadTutorialProgress("basic"), pi: loadTutorialProgress("pi"), guided: loadTutorialProgress("guided") }));
   const [completed, setCompleted] = useState<Record<string, CompletedPuzzleV1>>(() => loadCompleted());
   const [canStore] = useState(storageAvailable);
   const isEmbedded = /MicroMessenger|QQ\//i.test(navigator.userAgent);
@@ -35,13 +37,14 @@ export default function App() {
 
   useEffect(() => {
     const syncFromUrl = () => {
-      if (window.location.hash === "#tutorial") {
-        setTutorialActive(true);
+      const tutorialMatch = window.location.hash.match(/^#tutorial(?:\/(basic|pi|guided))?$/);
+      if (tutorialMatch) {
+        setTutorialRoute((tutorialMatch[1] as TutorialTrack | undefined) ?? "hub");
         setActive(null);
         return;
       }
-      setTutorialActive(false);
-      const match = window.location.hash.match(/^#play\/(TSH-\d{2})$/);
+      setTutorialRoute(null);
+      const match = window.location.hash.match(/^#play\/(TSH-(?:\d{4}-)?\d{2})$/);
       setActive(match && index ? index.puzzles.find((item) => item.id === match[1]) ?? null : null);
     };
     syncFromUrl();
@@ -51,24 +54,25 @@ export default function App() {
 
   const openPuzzle = (item: PuzzleIndexItem) => {
     window.location.hash = `play/${item.id}`;
-    setTutorialActive(false);
+    setTutorialRoute(null);
     setActive(item);
   };
 
-  const openTutorial = () => {
-    window.location.hash = "tutorial";
+  const openTutorial = (track?: TutorialTrack) => {
+    window.location.hash = track ? `tutorial/${track}` : "tutorial";
     setActive(null);
-    setTutorialActive(true);
+    setTutorialRoute(track ?? "hub");
   };
 
   const closePuzzle = () => {
     history.replaceState(null, "", `${window.location.pathname}${window.location.search}`);
     setActive(null);
-    setTutorialActive(false);
+    setTutorialRoute(null);
   };
 
   const visible = useMemo(
-    () => index?.puzzles.filter((item) => selectedDifficulty === "all" || item.difficulty === selectedDifficulty) ?? [],
+    () => (index?.puzzles.filter((item) => selectedDifficulty === "all" || item.difficulty === selectedDifficulty) ?? [])
+      .sort((left, right) => right.updatedAt.localeCompare(left.updatedAt) || left.id.localeCompare(right.id)),
     [index, selectedDifficulty],
   );
 
@@ -81,15 +85,21 @@ export default function App() {
     );
   }
 
-  if (tutorialActive) {
+  if (tutorialRoute) {
     return (
       <>
         <UpdateBanner />
-        <TutorialPage
-          onBack={closePuzzle}
-          onComplete={() => setTutorialProgress(loadTutorialProgress())}
-          onStartFirstPuzzle={index?.puzzles[0] ? () => openPuzzle(index.puzzles[0]) : undefined}
-        />
+        {tutorialRoute === "hub" ? (
+          <TutorialHub basic={tutorialProgress.basic} pi={tutorialProgress.pi} guided={tutorialProgress.guided} onStart={openTutorial} onBack={closePuzzle} />
+        ) : (
+          <TutorialPage
+            track={tutorialRoute}
+            onBack={() => openTutorial()}
+            onExit={closePuzzle}
+            onComplete={() => setTutorialProgress({ basic: loadTutorialProgress("basic"), pi: loadTutorialProgress("pi"), guided: loadTutorialProgress("guided") })}
+            onStartFirstPuzzle={index?.puzzles[0] ? () => openPuzzle(index.puzzles[0]) : undefined}
+          />
+        )}
       </>
     );
   }
@@ -109,25 +119,27 @@ export default function App() {
         <h1>πDay - 特色数回</h1>
         <p>在密铺的圆之间，寻找唯一闭环</p>
         <div className="progress-summary">
-          <strong>{Object.keys(completed).length}</strong><span>/ 20 已完成</span>
+          <strong>{Object.keys(completed).length}</strong><span>/ {index?.puzzles.length ?? 0} 已完成</span>
         </div>
       </header>
 
       <main className="home-content">
         <section className="tutorial-callout">
           <div className="tutorial-callout-art" aria-hidden="true">
-            <span className="orbit-arc arc-a" /><span className="orbit-arc arc-b" /><b>π</b>
+            <b>π</b><small>互动教程</small>
           </div>
           <div className="tutorial-callout-copy">
             <p className="eyebrow">第一次玩特色数回？</p>
-            <h2>{tutorialProgress.completed ? "随时重温互动教程" : "亲手操作，几分钟学会规则"}</h2>
-            <p>画线、观察错误，再用三小步弄懂 π 的统计范围、六类圆弧和“各一条”。</p>
+            <h2>{tutorialProgress.basic.completed && tutorialProgress.pi.completed && tutorialProgress.guided.completed ? "随时重温三个互动教程" : "从规则入门，到亲手完成 π 小题"}</h2>
+            <p>基础规则、π 专题、综合运用分开学习，最后用一题把逻辑串起来。</p>
             <div className="tutorial-callout-meta">
-              <span>{tutorialProgress.completed ? "✓ 已完成" : `进度 ${tutorialProgress.step + 1} / 8`}</span>
+              <span>数回基础 {tutorialProgress.basic.completed ? "✓" : `${tutorialProgress.basic.step + 1}/5`}</span>
+              <span>π 专题 {tutorialProgress.pi.completed ? "✓" : `${tutorialProgress.pi.step + 1}/3`}</span>
+              <span>综合题 {tutorialProgress.guided.completed ? "✓" : `${tutorialProgress.guided.step + 1}/3`}</span>
               <span>不计时</span><span>可随时退出</span>
             </div>
           </div>
-          <button type="button" onClick={openTutorial}>{tutorialProgress.completed ? "重新学习" : tutorialProgress.step > 0 ? "继续教程" : "开始互动教程"}<span>→</span></button>
+          <button type="button" onClick={() => openTutorial()}>打开教程中心<span>→</span></button>
         </section>
         <section className="rules-card">
           <div>
@@ -144,7 +156,7 @@ export default function App() {
         <section className="level-section">
           <div className="section-heading">
             <div><p className="eyebrow dark">选择难度</p><h2>开始挑战</h2></div>
-            <button className={selectedDifficulty === "all" ? "active-filter" : ""} onClick={() => setSelectedDifficulty("all")}>全部 20 题</button>
+            <button className={selectedDifficulty === "all" ? "active-filter" : ""} onClick={() => setSelectedDifficulty("all")}>全部 {index?.puzzles.length ?? 0} 题</button>
           </div>
           <div className="difficulty-grid">
             {difficultyOrder.map((difficulty) => {
@@ -165,28 +177,24 @@ export default function App() {
         </section>
 
         <section className="puzzle-section">
-          <h2>{selectedDifficulty === "all" ? "全部关卡" : labels[selectedDifficulty]}</h2>
+          <div className="puzzle-list-heading"><h2>{selectedDifficulty === "all" ? "全部关卡" : labels[selectedDifficulty]}</h2><span>按最近更新时间排序</span></div>
           {error && <div className="error-panel">{error}</div>}
           {!index && !error && <div className="center-state"><div className="spinner" /><p>正在加载关卡…</p></div>}
           <div className="puzzle-grid">
             {visible.map((item) => {
               const record = completed[item.id];
               return (
-                <button key={item.id} className={`puzzle-card tier-${item.difficulty}`} onClick={() => openPuzzle(item)}>
-                  <span className="puzzle-code">{item.id}</span>
-                  <span className="puzzle-level">{item.difficultyLabel}</span>
-                  {record ? (
-                    <span className="completion-badge">✓ 最佳 {formatElapsed(record.bestElapsedMs)}</span>
-                  ) : (
-                    <span className="not-started">开始作答 →</span>
-                  )}
+                <button key={item.id} className={`puzzle-card tier-${item.difficulty}`} onClick={() => setPreview(item)}>
+                  <span className="puzzle-card-main"><span className="puzzle-code">{item.id}</span><small>更新于 {item.updatedAt} · v{item.revision}</small></span>
+                  <span className="puzzle-card-state">{record ? <small>✓ 最佳 {formatElapsed(record.bestElapsedMs)}</small> : <small>查看题面</small>}<strong>{item.difficultyLabel}</strong></span>
                 </button>
               );
             })}
           </div>
         </section>
       </main>
-      <footer className="site-footer">πDay - 特色数回 · 20 道唯一解挑战</footer>
+      {preview && <PuzzlePreviewModal item={preview} record={completed[preview.id]} onClose={() => setPreview(null)} onConfirm={() => { setPreview(null); openPuzzle(preview); }} />}
+      <footer className="site-footer">πDay - 特色数回 · 持续更新的唯一解挑战</footer>
     </div>
   );
 }

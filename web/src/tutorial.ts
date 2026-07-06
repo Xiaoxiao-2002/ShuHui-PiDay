@@ -6,13 +6,23 @@ export interface TutorialProgressV1 {
   completed: boolean;
 }
 
-const KEY = "shuhui:piday:v1:tutorial";
+export type TutorialTrack = "basic" | "pi" | "guided";
 
-export function loadTutorialProgress(): TutorialProgressV1 {
+const LEGACY_KEY = "shuhui:piday:v1:tutorial";
+const keyFor = (track: TutorialTrack) => `${LEGACY_KEY}:${track}`;
+const lastStep: Record<TutorialTrack, number> = { basic: 4, pi: 2, guided: 2 };
+
+export function loadTutorialProgress(track: TutorialTrack): TutorialProgressV1 {
   try {
-    const saved = JSON.parse(localStorage.getItem(KEY) ?? "null") as TutorialProgressV1 | null;
+    const saved = JSON.parse(localStorage.getItem(keyFor(track)) ?? "null") as TutorialProgressV1 | null;
     if (saved?.schemaVersion === 1) {
-      return { schemaVersion: 1, step: Math.max(0, Math.min(7, saved.step)), completed: Boolean(saved.completed) };
+      return { schemaVersion: 1, step: Math.max(0, Math.min(lastStep[track], saved.step)), completed: Boolean(saved.completed) };
+    }
+    if (track === "basic") {
+      const legacy = JSON.parse(localStorage.getItem(LEGACY_KEY) ?? "null") as TutorialProgressV1 | null;
+      if (legacy?.schemaVersion === 1) {
+        return { schemaVersion: 1, step: Math.max(0, Math.min(lastStep.basic, legacy.step)), completed: Boolean(legacy.completed) };
+      }
     }
   } catch {
     // Restricted or malformed storage should never block the tutorial.
@@ -20,10 +30,10 @@ export function loadTutorialProgress(): TutorialProgressV1 {
   return { schemaVersion: 1, step: 0, completed: false };
 }
 
-export function saveTutorialProgress(step: number, completed = false): TutorialProgressV1 {
-  const progress = { schemaVersion: 1 as const, step: Math.max(0, Math.min(7, step)), completed };
+export function saveTutorialProgress(track: TutorialTrack, step: number, completed = false): TutorialProgressV1 {
+  const progress = { schemaVersion: 1 as const, step: Math.max(0, Math.min(lastStep[track], step)), completed };
   try {
-    localStorage.setItem(KEY, JSON.stringify(progress));
+    localStorage.setItem(keyFor(track), JSON.stringify(progress));
   } catch {
     // Continue in memory when embedded browsers deny storage.
   }
@@ -86,3 +96,58 @@ export const tutorialPuzzle: PlayablePuzzleV1 = {
     },
   },
 };
+
+function buildPiGuidedPuzzle(): PlayablePuzzleV1 {
+  const circleDefs = [
+    { row: 0, col: 0, cx: 0, cy: 0 },
+    { row: 0, col: 1, cx: 1, cy: 0 },
+    { row: 1, col: 0, cx: 0.5, cy: Math.sqrt(3) / 2 },
+  ];
+  const vertices = new Map<string, { id: string; x: number; y: number }>();
+  const edges: PlayablePuzzleV1["topology"]["edges"] = [];
+  const cells: PlayablePuzzleV1["topology"]["cells"] = [];
+  const incidentEdges: Record<string, string[]> = {};
+  const vertexId = (x: number, y: number) => {
+    const key = `p:${Math.round(x * 1_000_000)}:${Math.round(y * 1_000_000)}`;
+    if (!vertices.has(key)) vertices.set(key, { id: key, x, y });
+    return key;
+  };
+
+  for (const circle of circleDefs) {
+    const ids = Array.from({ length: 6 }, (_, direction) => {
+      const angle = (direction * Math.PI) / 3;
+      return vertexId(circle.cx + 0.5 * Math.cos(angle), circle.cy + 0.5 * Math.sin(angle));
+    });
+    const edgeIds: string[] = [];
+    for (let sector = 0; sector < 6; sector += 1) {
+      const id = `arc:${circle.row}:${circle.col}:${sector}`;
+      const ends: [string, string] = [ids[sector], ids[(sector + 1) % 6]];
+      edges.push({ id, vertices: ends, sector, circle: { center: [circle.cx, circle.cy], radius: 0.5, startAngle: sector * 60, spanAngle: 60 } });
+      for (const end of ends) (incidentEdges[end] ??= []).push(id);
+      edgeIds.push(id);
+    }
+    cells.push({ id: `circle:${circle.row}:${circle.col}`, edgeIds, center: [circle.cx, circle.cy], kind: "circle" });
+  }
+  const triangleId = "tri:circle:0:0+circle:0:1+circle:1:0";
+  cells.push({ id: triangleId, edgeIds: ["arc:0:0:0", "arc:0:1:2", "arc:1:0:4"], center: [0.5, Math.sqrt(3) / 6], kind: "triangle" });
+  const allVertices = [...vertices.values()];
+  return {
+    schemaVersion: 1,
+    dataVersion: "tutorial-v1",
+    sourceHash: "tutorial-guided-pi-v1",
+    id: "π 综合练习",
+    difficulty: "beginner",
+    difficultyLabel: "逐步引导",
+    clues: [{ cellId: "circle:0:0", kind: "pi" }, { cellId: triangleId, kind: "pi" }],
+    topology: {
+      bounds: {
+        minX: Math.min(...allVertices.map((item) => item.x)), maxX: Math.max(...allVertices.map((item) => item.x)),
+        minY: Math.min(...allVertices.map((item) => item.y)), maxY: Math.max(...allVertices.map((item) => item.y)),
+      },
+      vertices: allVertices.sort((a, b) => a.id.localeCompare(b.id)), edges, cells,
+      incidentEdges: Object.fromEntries(Object.entries(incidentEdges).sort(([a], [b]) => a.localeCompare(b))),
+    },
+  };
+}
+
+export const piGuidedPuzzle = buildPiGuidedPuzzle();

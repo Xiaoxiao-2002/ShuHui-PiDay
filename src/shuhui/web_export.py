@@ -29,9 +29,10 @@ def _tier(puzzle: Puzzle) -> str:
     return value
 
 
-def playable_payload(puzzle: Puzzle, topology: Topology | None = None) -> dict[str, Any]:
+def playable_payload(puzzle: Puzzle, topology: Topology | None = None, *, catalog: dict[str, Any] | None = None) -> dict[str, Any]:
     topology = topology or build_topology(puzzle)
-    puzzle_id = str(puzzle.metadata.get("id", ""))
+    catalog = catalog or {}
+    puzzle_id = str(catalog.get("id") or puzzle.metadata.get("id", ""))
     if not puzzle_id:
         raise ValueError("题目缺少 metadata.id")
     tier = _tier(puzzle)
@@ -72,6 +73,9 @@ def playable_payload(puzzle: Puzzle, topology: Topology | None = None) -> dict[s
         "id": puzzle_id,
         "difficulty": tier,
         "difficultyLabel": TIER_LABELS[tier],
+        "publishedAt": catalog.get("publishedAt", "2026-07-06"),
+        "updatedAt": catalog.get("updatedAt", "2026-07-06"),
+        "revision": int(catalog.get("revision", 1)),
         "clues": [
             {
                 "cellId": clue.cell_id,
@@ -102,19 +106,27 @@ def _atomic_json(path: Path, data: Any) -> None:
     path.chmod(0o644)
 
 
-def export_web_bundle(puzzle_paths: Iterable[Path], destination: Path) -> list[dict[str, Any]]:
+def export_web_bundle(
+    puzzle_paths: Iterable[Path],
+    destination: Path,
+    *,
+    catalog_entries: Iterable[dict[str, Any]] | None = None,
+    catalog_version: str = "2026.1",
+) -> list[dict[str, Any]]:
     puzzles = [load_puzzle(path) for path in puzzle_paths]
-    puzzles.sort(key=lambda puzzle: str(puzzle.metadata.get("id", "")))
-    expected_ids = [f"TSH-{index:02d}" for index in range(1, 21)]
-    actual_ids = [str(puzzle.metadata.get("id", "")) for puzzle in puzzles]
-    if actual_ids != expected_ids:
-        raise ValueError(f"正式题编号必须连续为 TSH-01 至 TSH-20，实际为 {actual_ids}")
+    catalogs = list(catalog_entries or ({} for _ in puzzles))
+    if len(catalogs) != len(puzzles):
+        raise ValueError("题库目录条目数与题目文件数不一致")
+    pairs = list(zip(puzzles, catalogs, strict=True))
+    public_ids = [str(catalog.get("id") or puzzle.metadata.get("id", "")) for puzzle, catalog in pairs]
+    if len(public_ids) != len(set(public_ids)) or any(not item for item in public_ids):
+        raise ValueError("公开题号必须存在且不能重复")
     distribution = Counter(_tier(puzzle) for puzzle in puzzles)
     if distribution != Counter({"beginner": 8, "medium": 4, "difficult": 4, "expert": 4}):
         raise ValueError(f"难度分布错误：{dict(distribution)}")
 
     index_items: list[dict[str, Any]] = []
-    for puzzle in puzzles:
+    for puzzle, catalog in pairs:
         valid, message = validate_target_solution(puzzle)
         if not valid:
             raise ValueError(f"{puzzle.metadata['id']} 目标答案无效：{message}")
@@ -123,11 +135,11 @@ def export_web_bundle(puzzle_paths: Iterable[Path], destination: Path) -> list[d
             raise ValueError(f"{puzzle.metadata['id']} 未通过唯一解复验")
         if set(solved.solution or []) != set(puzzle.target_solution_edges or []):
             raise ValueError(f"{puzzle.metadata['id']} 唯一解与目标答案不一致")
-        payload = playable_payload(puzzle)
+        payload = playable_payload(puzzle, catalog=catalog)
         forbidden = {"target_solution_edges", "targetSolutionEdges", "analysis", "solution_edges", "solutionEdges"}
         if forbidden.intersection(payload):
             raise AssertionError(f"{puzzle.metadata['id']} 网页数据包含答案字段")
-        _atomic_json(destination / f"{puzzle.metadata['id']}.json", payload)
+        _atomic_json(destination / f"{payload['id']}.json", payload)
         index_items.append(
             {
                 "id": payload["id"],
@@ -135,8 +147,13 @@ def export_web_bundle(puzzle_paths: Iterable[Path], destination: Path) -> list[d
                 "difficultyLabel": payload["difficultyLabel"],
                 "sourceHash": payload["sourceHash"],
                 "file": f"{payload['id']}.json",
+                "publishedAt": payload["publishedAt"],
+                "updatedAt": payload["updatedAt"],
+                "revision": payload["revision"],
+                "clueCount": len(payload["clues"]),
+                "cellCount": len(payload["topology"]["cells"]),
             }
         )
-    index = {"schemaVersion": WEB_SCHEMA_VERSION, "dataVersion": DATA_VERSION, "puzzles": index_items}
+    index = {"schemaVersion": WEB_SCHEMA_VERSION, "dataVersion": DATA_VERSION, "catalogVersion": catalog_version, "puzzles": index_items}
     _atomic_json(destination / "index.json", index)
     return index_items

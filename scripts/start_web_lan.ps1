@@ -9,10 +9,10 @@ $Web = Join-Path $Root "web"
 $Python = Join-Path $Root ".venv\Scripts\python.exe"
 
 if (-not (Get-Command node.exe -ErrorAction SilentlyContinue)) {
-    throw "未找到 Node.js。请安装 Node.js 24 LTS 后重新打开终端。"
+    throw "Node.js was not found. Install Node.js 24 LTS and reopen PowerShell."
 }
 if (-not (Test-Path $Python)) {
-    throw "未找到 .venv。请先按 README 安装 Python 开发环境。"
+    throw "Python virtual environment .venv was not found. Follow README.md to create it first."
 }
 
 if (-not $SkipBuild) {

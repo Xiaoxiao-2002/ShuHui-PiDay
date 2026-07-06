@@ -2,9 +2,12 @@
   "schemaVersion": 1,
   "dataVersion": "piday-2026-v1",
   "sourceHash": "32ed99b78899c0acf81cc32b8f7a45262c0359c3fdb30bf46eb924cb45d40b1c",
-  "id": "TSH-19",
+  "id": "TSH-2026-19",
   "difficulty": "expert",
   "difficultyLabel": "专家 Expert",
+  "publishedAt": "2026-07-06",
+  "updatedAt": "2026-07-06",
+  "revision": 1,
   "clues": [
     {
       "cellId": "circle:10:10",
